@@ -49,7 +49,7 @@ function App() {
         <div className="flex justify-center">
           <div className="bg-white/60 backdrop-blur-md shadow-md rounded-lg p-6 w-full max-w-md">
             <h1 className="text-2xl font-bold text-center mb-6">
-              Drop Anonymous Tip
+              Drop An Anonymous Tip
             </h1>
             <form ref={form} onSubmit={sendEmail} encType="multipart/form-data">
               <div className="mb-4">
