@@ -15,7 +15,7 @@ function App() {
         <div className="flex  ">
           <div className="bg-white shadow-md rounded-lg p-6 w-full max-w-md">
             <h1 className="text-2xl font-bold text-center mb-6">
-              Send Anonymous Message
+              Drop Anonymous Tip
             </h1>
             <form>
               <div className="mb-4">
