@@ -16,7 +16,7 @@ const data = [
     {
         id: 1,
         photo: Team1,
-        name: "Samuel Okudzeto ABLAKWA",
+        name: "SAMUEL OKUDZETO ABLAKWA",
         position: "COMMITTEE CHAIR",
         desc: `A distinguished parliamentarian and former Deputy Minister of Education, Mr. Ablakwa has established himself as one of Ghana's most vigilant public servants. As Member of Parliament for North Tongu, he has:`,
         list1: `Led numerous parliamentary investigations into public sector financial irregularities`,
@@ -29,19 +29,19 @@ const data = [
         id: 2,
         photo: Team2,
         name: "DANIEL YAO DOMELEVO",
-        position: "GHANA’S FORMER AUDITOR GENERAL",
-        desc: `Mr. Olusegun Ogbonnewo is a Director in TenGen Holdings Limited with over 27 years’ professional experience in the financial service industry cutting across banking, human capital development, operations, payment systems and financial technology.`,
-        list1: `Led numerous parliamentary investigations into public sector financial irregularities`,
-        list2: `Exposed several high-profile cases of procurement misconduct through meticulous research`,
-        list3: `Consistently demonstrated non-partisan approach to oversight responsibilities`,
-        list4: `Championed transparency in public financial management through legislative reforms`,
-        list5: `Received multiple awards for his anti-corruption advocacy and public service`,
+        position: "COMMITEE MEMBER",
+        desc: `As Ghana's former Auditor-General, Mr. Domelevo's reputation for integrity and courage in public service is unmatched:`,
+        list1: `Conducted groundbreaking audits that recovered millions in misappropriated funds`,
+        list2: `Successfully pursued surcharge cases against public officials regardless of political affiliation`,
+        list3: `Introduced innovative audit methodologies that significantly improved detection of financial malfeasance`,
+        list4: `Received international recognition for his anti-corruption efforts, including the 2019 Global Integrity Leadership Award`,
+        list5: `Demonstrated unwavering commitment to protecting public funds despite significant personal and professional pressures`,
     },
     {
         id: 3,
         photo: Team3,
         name: "COP (RTD.) Nathaniel KOFI BOAKYE",
-        position: "Non-Executive Director",
+        position: "COMMITEE MEMBER",
         desc: `A career law enforcement professional with over three decades of distinguished service:`,
         list1: `Led numerous successful investigations into complex financial crimes and corruption cases`,
         list2: `Developed specialized investigative protocols for tracking illicit financial flows`,
@@ -54,8 +54,8 @@ const data = [
     {
         id: 4,
         photo: Team4,
-        name: "LEGAL LUMINARY",
-        position: "Non-Executive Director",
+        name: "MARTIN KPEBU",
+        position: "COMMITEE MEMBER",
         desc: `A legal luminary with extensive experience in anti-corruption litigation and constitutional law:`,
         list1: `Successfully litigated numerous high-profile corruption cases in Ghana's superior courts`,
         list2: `Pioneered several public interest cases that strengthened anti-corruption legal frameworks`,
@@ -68,7 +68,7 @@ const data = [
         id: 5,
         photo: Team5,
         name: "Raymond Archer",
-        position: "INVESTIGATIVE JOURNALIST",
+        position: "COMMITEE MEMBER",
         desc: `An internationally recognized investigative journalist with over two decades of exposing corruption:`,
         list1: `Led investigations that uncovered major financial scandals across multiple sectors `,
         list2: `Developed innovative investigative methodologies now used as industry standards`,
@@ -153,13 +153,13 @@ const SlickSlider = () => {
                                     </div>
                                     <p className="text-sm text-whte w-full text-[12px]">{item.desc}</p>
                                     <div className="list-disc pl-5">
-                                        <p className="text-sm text-white text-[12px] leading-[24px]">{item.list1}</p>
-                                        <p className="text-sm text-white text-[12px] leading-[24px]">{item.list2}</p>
-                                        <p className="text-sm text-white text-[12px] leading-[24px]">{item.list3}</p>
-                                        <p className="text-sm text-white text-[12px] leading-[24px]">{item.list4}</p>
-                                        <p className="text-sm text-white text-[12px] leading-[24px]">{item.list5}</p>
-                                        <p className="text-sm text-white text-[12px] leading-[24px]">{item.list6}</p>
-                                        <p className="text-sm text-white text-[12px] leading-[24px]">{item.list7}</p>
+                                        <p className="text-[10px] text-white leading-[24px]">{item.list1}</p>
+                                        <p className="text-[10px] text-white leading-[24px]">{item.list2}</p>
+                                        <p className="text-[10px] text-white leading-[24px]">{item.list3}</p>
+                                        <p className="text-[10px] text-white leading-[24px]">{item.list4}</p>
+                                        <p className="text-[10px] text-white leading-[24px]">{item.list5}</p>
+                                        <p className="text-[10px] text-white leading-[24px]">{item.list6}</p>
+                                        <p className="text-[10px] text-white leading-[24px]">{item.list7}</p>
                                     </div>
                                 </div>
                             </div>

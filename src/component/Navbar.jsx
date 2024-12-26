@@ -6,6 +6,7 @@ import logo from "../assets/hero/oral_logo.png";
 
 export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [activeLink, setActiveLink] = useState("/"); // Track active link
 
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!mobileMenuOpen);
@@ -13,6 +14,11 @@ export default function Navbar() {
 
     const closeMobileMenu = () => {
         setMobileMenuOpen(false);
+    };
+
+    const handleLinkClick = (link) => {
+        setActiveLink(link); // Set clicked link as active
+        closeMobileMenu(); // Close mobile menu on link click
     };
 
     return (
@@ -54,31 +60,41 @@ export default function Navbar() {
                     <div className="hidden md:flex items-center space-x-8">
                         <Link
                             to="/"
-                            className="text-[#0B5C2C] hover:text-[#0B5C2C]/80 font-medium"
+                            className={`${activeLink === "/" ? "text-green-500 underline" : "text-[#0B5C2C]"
+                                } hover:text-[#0B5C2C]/80 font-medium`}
+                            onClick={() => handleLinkClick("/")}
                         >
                             Home
                         </Link>
                         <Link
                             to="/about"
-                            className="text-[#0B5C2C] hover:text-[#0B5C2C]/80 font-medium"
+                            className={`${activeLink === "/about" ? "text-green-500 underline" : "text-[#0B5C2C]"
+                                } hover:text-[#0B5C2C]/80 font-medium`}
+                            onClick={() => handleLinkClick("/about")}
                         >
                             About us
                         </Link>
                         <Link
                             to="/blog"
-                            className="text-[#0B5C2C] hover:text-[#0B5C2C]/80 font-medium"
+                            className={`${activeLink === "/blog" ? "text-green-500 underline" : "text-[#0B5C2C]"
+                                } hover:text-[#0B5C2C]/80 font-medium`}
+                            onClick={() => handleLinkClick("/blog")}
                         >
                             Blog
                         </Link>
                         <Link
                             to="/report"
-                            className="text-[#0B5C2C] hover:text-[#0B5C2C]/80 font-medium"
+                            className={`${activeLink === "/report" ? "text-green-500 underline" : "text-[#0B5C2C]"
+                                } hover:text-[#0B5C2C]/80 font-medium`}
+                            onClick={() => handleLinkClick("/report")}
                         >
                             Report issue
                         </Link>
                         <Link
                             to="/contact"
-                            className="text-[#0B5C2C] hover:text-[#0B5C2C]/80 font-medium"
+                            className={`${activeLink === "/contact" ? "text-green-500 underline" : "text-[#0B5C2C]"
+                                } hover:text-[#0B5C2C]/80 font-medium`}
+                            onClick={() => handleLinkClick("/contact")}
                         >
                             Contact Us
                         </Link>
@@ -99,36 +115,41 @@ export default function Navbar() {
                     <div className="flex flex-col items-center justify-center h-full space-y-8">
                         <Link
                             to="/"
-                            className="text-white text-lg font-medium"
-                            onClick={closeMobileMenu}
+                            className={`${activeLink === "/" ? "text-green-500 underline" : "text-white"
+                                } text-lg font-medium`}
+                            onClick={() => handleLinkClick("/")}
                         >
                             Home
                         </Link>
                         <Link
                             to="/about"
-                            className="text-white text-lg font-medium"
-                            onClick={closeMobileMenu}
+                            className={`${activeLink === "/about" ? "text-green-500 underline" : "text-white"
+                                } text-lg font-medium`}
+                            onClick={() => handleLinkClick("/about")}
                         >
                             About us
                         </Link>
                         <Link
                             to="/blog"
-                            className="text-white text-lg font-medium"
-                            onClick={closeMobileMenu}
+                            className={`${activeLink === "/blog" ? "text-green-500 underline" : "text-white"
+                                } text-lg font-medium`}
+                            onClick={() => handleLinkClick("/blog")}
                         >
                             Blog
                         </Link>
                         <Link
                             to="/report"
-                            className="text-white text-lg font-medium"
-                            onClick={closeMobileMenu}
+                            className={`${activeLink === "/report" ? "text-green-500 underline" : "text-white"
+                                } text-lg font-medium`}
+                            onClick={() => handleLinkClick("/report")}
                         >
                             Report issue
                         </Link>
                         <Link
                             to="/contact"
-                            className="text-white text-lg font-medium"
-                            onClick={closeMobileMenu}
+                            className={`${activeLink === "/contact" ? "text-green-500 underline" : "text-white"
+                                } text-lg font-medium`}
+                            onClick={() => handleLinkClick("/contact")}
                         >
                             Contact Us
                         </Link>

@@ -1,0 +1,88 @@
+app.css html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+/* Styles for the scrollbar */
+/* .custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: green;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  height: 15px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: green;
+}
+
+.custom-scrollbar::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Apply styles to Firefox */
+/* .custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: green transparent;
+} */
+.custom-scrollbar {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
+
+.tooltip-container {
+    position: relative;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    left: 0;
+    /* Align tooltip with the start of the container */
+    top: 100%;
+    /* Position it below the trigger element */
+    background-color: black;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    z-index: 999;
+    width: 300px;
+    /* Define a consistent width */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Add a subtle shadow */
+}
+
+.tooltip-container:hover .tooltip {
+    display: block;
+}
+
+@media (max-width: 360px) {
+    .galaxy {
+        position: absolute;
+        top: 80%;
+        left: 2%;
+    }
+}

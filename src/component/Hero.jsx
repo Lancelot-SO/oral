@@ -7,8 +7,10 @@ import flag2 from "../assets/hero/flag2.png"
 import freedom from "../assets/hero/freedom.png"
 import blackbg from "../assets/hero/blackbg.png"
 import Team1 from "../assets/hero/team1.png"
-import Team2 from "../assets/hero/team2.png"
 import Team3 from "../assets/hero/team3.png"
+import Blog6 from "../assets/blog/blog6.png"
+import Blog4 from "../assets/blog/blog4.png"
+
 
 
 const Hero = () => {
@@ -16,31 +18,31 @@ const Hero = () => {
     const newsItems = [
         {
             id: 1,
-            title: "John Mahama names his...",
+            title: "Ghana President-elect Mahama names anti-corruption team",
             description: "Former President and President-elect John Dramani Mahama ha...",
             image: Team1,
-            link: "#",
+            link: "https://www.reuters.com/world/africa/ghana-president-elect-mahama-names-anti-corruption-team-2024-12-18/",
         },
         {
             id: 2,
-            title: "Revolutionising Customer...",
-            description: "Regardless of industry or sector, almost all businesses today are s...",
-            image: Team2,
-            link: "#",
+            title: "Ablekuma North MP backs ORAL team’s...",
+            description: "However, she said “We are people who must be guided by the past about what has happened…we have seen similar committees being formed before. Akufo-Addo put in place several committees..",
+            image: Blog6,
+            link: "https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Ablekuma-North-MP-backs-ORAL-team-s-decision-to-work-without-allowances-1964897",
         },
         {
             id: 3,
             title: "Dossier on 'ghost names'...",
             description: "The Operation Recover All Loot (ORAL) team, chaired by Samuel...",
             image: Team3,
-            link: "#",
+            link: "https://www.graphic.com.gh/news/general-news/team-oral-receives-dossier-on-alleged-ghost-names-at-national-service-authority.html#google_vignette",
         },
         {
             id: 4,
-            title: "Dossier on 'ghost names'...",
-            description: "The Operation Recover All Loot (ORAL) team, chaired by Samuel...",
-            image: Team3,
-            link: "#",
+            title: "The day of accountability is coming for NPP –",
+            description: "Despite the challenges, Tameklo noted Mahama’s unwavering resolve to ensure justice prevailed, stating that Mahama famously declared, “The wrongdoing must be investigated.”",
+            image: Blog4,
+            link: "https://3news.com/news/the-day-of-accountability-is-coming-for-npp-edudzi-tameklo/",
         },
     ];
     return (
@@ -83,9 +85,9 @@ const Hero = () => {
                                 commitment to justice, we work to restore public assets and
                                 strengthen Ghana&apos;s financial integrity.
                             </p>
-                            <button className="text-white bg-[#146221] px-4 lg:px-6 py-2 lg:py-3 font-medium self-center lg:self-end">
+                            <a href="/report" className="text-white bg-[#146221] px-4 lg:px-6 py-2 lg:py-3 font-medium self-center lg:self-end">
                                 Be a Whistle Blower
-                            </button>
+                            </a>
                         </div>
 
                         {/* Yellow Container */}
@@ -104,7 +106,7 @@ const Hero = () => {
                     <h2 className="font-bold text-[24px] sm:text-[36px] lg:text-[40px] leading-5 tracking-wide">
                         Make A Submission
                     </h2>
-                    <a href="/" className="w-full sm:w-auto lg:w-[340px] flex items-center justify-center py-3 sm:py-4 lg:py-5 shadow-md bg-white">
+                    <a href="/report" className="w-full sm:w-auto lg:w-[340px] flex items-center justify-center py-3 sm:py-4 lg:py-5 shadow-md bg-white">
                         <button className="text-[#146221] font-bold text-sm sm:text-base lg:text-lg">
                             Make your Submission
                         </button>
@@ -175,8 +177,8 @@ const Hero = () => {
                                 <p className="text-gray-400">Hear the latest news from our task...</p>
                             </div>
                             <a
-                                href="#"
-                                className="text-white hover:text-gray-300 transition-colors"
+                                href="/blog"
+                                className="text-white cursor-pointer hover:text-gray-300 transition-colors"
                             >
                                 See More
                             </a>
@@ -199,6 +201,7 @@ const Hero = () => {
                                         <p className="text-gray-600 text-sm mb-4">{item.description}</p>
                                         <a
                                             href={item.link}
+                                            target="_blank"
                                             className="text-green-500 hover:text-green-400 text-sm font-medium transition-colors"
                                         >
                                             Read More

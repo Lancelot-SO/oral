@@ -1,73 +1,164 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
-import footerImg from "../assets/footer/footerImg.png"
-import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
+import React from "react";
+import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import footerImg from "../assets/footer/footerImg.png";
 
 const Footer = () => {
     return (
-        <div>
-            <div className='lg:h-[260px] h-[600px] flex lg:flex-row flex-col gap-4 bg-gradient-to-r from-[#0C1E15] to-[#064A3B] text-white py-8'>
-                <div className='lg:pt-[60px]'>
-                    <img
-                        src={footerImg}
-                        alt='footer'
-                        loading='lazy'
-                        className='object-cover'
-                    />
+        <footer className="bg-gradient-to-r from-black via-green-900 to-green-700 text-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                    {/* Left Section */}
+                    <div>
+                        <h2 className="text-2xl font-bold">ORAL</h2>
+                        <img
+                            src={footerImg}
+                            alt="footer"
+                            loading="lazy"
+                            className="object-cover mt-4"
+                        />
+                        <div className="flex space-x-4 mt-4">
+                            <a
+                                href="#"
+                                className="text-white hover:text-gray-300"
+                                aria-label="Facebook"
+                            >
+                                <FaFacebook className="w-6 h-6" />
+                            </a>
+                            <a
+                                href="#"
+                                className="text-white hover:text-gray-300"
+                                aria-label="Twitter"
+                            >
+                                <FaTwitter className="w-6 h-6" />
+                            </a>
+                            <a
+                                href="#"
+                                className="text-white hover:text-gray-300"
+                                aria-label="Instagram"
+                            >
+                                <FaInstagram className="w-6 h-6" />
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* Other Sections */}
+                    <div className="col-span-1 md:col-span-2 lg:col-span-4 border-b border-white">
+                        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {/* Resources Section */}
+                            <div>
+                                <h3 className="font-semibold mb-4">Resources</h3>
+                                <ul className="space-y-2 text-sm">
+                                    <li>
+                                        <a href="#" className="hover:text-gray-300">
+                                            Reporting
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="hover:text-gray-300">
+                                            Whistleblower Protection
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="hover:text-gray-300">
+                                            FAQ
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            {/* Legal & Security Section */}
+                            <div>
+                                <h3 className="font-semibold mb-4">Legal & Security</h3>
+                                <ul className="space-y-2 text-sm">
+                                    <li>
+                                        <a href="#" className="hover:text-gray-300">
+                                            Privacy Policy
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="hover:text-gray-300">
+                                            Terms of Service
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="hover:text-gray-300">
+                                            Whistleblower Rights
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            {/* Partner Agencies Section */}
+                            <div>
+                                <h3 className="font-semibold mb-4">Partner Agencies</h3>
+                                <ul className="space-y-2 text-sm">
+                                    <li>
+                                        <a href="#" className="hover:text-gray-300">
+                                            CHIRAJ
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="hover:text-gray-300">
+                                            EOCO
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="hover:text-gray-300">
+                                            OSP
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            {/* Contact & Support Section */}
+                            <div>
+                                <h3 className="font-semibold mb-4">Contact & Support</h3>
+                                <ul className="space-y-2 text-sm">
+                                    <li>
+                                        <a href="#" className="hover:text-gray-300">
+                                            Secure Contact
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="hover:text-gray-300">
+                                            Email & Phone Guide
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <div className='lg:w-[1200px] w-full lg:h-[200px] h-[300px] px-4 lg:px-0'>
-                    <div className='flex lg:flex-row flex-col justify-between lg:h-[107px] border-b border-white'>
-                        <div className='flex flex-col gap-2'>
-                            <label>
-                                Be a whistle blower
-                            </label>
-                            <div className='flex gap-2'>
-                                <input type='text'
-                                    placeholder='Enter your email'
-                                    name='footer_email'
-                                    className='w-[256px] h-[30px] border border-white bg-transparent'
-                                />
-                                <button className='h-[30px] px-4 border border-white bg-transparent'>
-                                    Send
-                                </button>
-                            </div>
-                        </div>
-                        <div className="flex flex-col py-4 lg:py-0">
-                            <h2 className="text-lg font-semibold mb-4">Follow Us</h2>
-                            <div className="flex space-x-4">
-                                <a href="#" className="w-8 h-8 flex items-center justify-center rounded-full border border-white">
-                                    <FaFacebook />
-                                </a>
-                                <a href="#" className="w-8 h-8 flex items-center justify-center rounded-full border border-white">
-                                    <FaTwitter />
-                                </a>
-                                <a href="#" className="w-8 h-8 flex items-center justify-center rounded-full border border-white">
-                                    <FaInstagram />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="flex lg:flex-row flex-col gap-6 lg:gap-0 items-center justify-between pt-4">
-                        <div className='flex lg:flex-col gap-6'>
-                            <p className="text-[12px]">
-                                The appearance of U.S. Department of Defense personnel or other visual information does not imply or constitute DoD endorsement.
-                            </p>
-                            <p className='text-[12px]'>
-                                The appearance of U.S. Department of Defense personnel or other visual information does not imply or constitute DoD endorsement.
-                            </p>
-                        </div>
-                        <div className="flex space-x-4 text-xs">
-                            <a href="#" className="hover:underline">Privacy Policy</a>
-                            <a href="#" className="hover:underline">Terms & Conditions</a>
-                            <a href="#" className="hover:underline">Press</a>
-                            <a href="#" className="hover:underline">Careers</a>
-                            <a href="#" className="hover:underline">Powered by Nucleus</a>
-                        </div>
-                    </div>
+
+                {/* Footer Bottom */}
+                <div className="py-4 text-center lg:text-end text-xs">
+                    <p className="space-x-4">
+                        <a href="#" className="hover:text-gray-300">
+                            Privacy Policy
+                        </a>
+                        <span>|</span>
+                        <a href="#" className="hover:text-gray-300">
+                            Terms & Conditions
+                        </a>
+                        <span>|</span>
+                        <a href="#" className="hover:text-gray-300">
+                            News
+                        </a>
+                        <span>|</span>
+                        <a href="#" className="hover:text-gray-300">
+                            Report
+                        </a>
+                        <span>|</span>
+                        <a href="#" className="hover:text-gray-300">
+                            Powered by unknown
+                        </a>
+                    </p>
                 </div>
             </div>
-        </div>
-    )
-}
+        </footer>
+    );
+};
 
-export default Footer
+export default Footer;

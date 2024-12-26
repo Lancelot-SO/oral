@@ -28,6 +28,7 @@ const About = () => {
                     </p>
                 </div>
             </div>
+
             <section>
                 <div className="flex items-center justify-center px-4 sm:px-6">
                     <div className="bg-[#F8F8F8] w-full max-w-[1360px] h-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-6 py-6">
