@@ -6,6 +6,7 @@ import about2 from "../assets/about/about2.png"
 import about3 from "../assets/about/about3.png"
 import SlickSlider from '../component/SlickSlider'
 import flag2 from "../assets/hero/flag2.png"
+import { FaLock, FaShieldAlt, FaUserShield } from 'react-icons/fa'
 
 
 
@@ -214,17 +215,52 @@ const About = () => {
 
             <section>
                 <div className="w-full lg:h-[240px] bg-black flex flex-col lg:flex-row justify-between pl-6 lg:pl-16 relative">
-                    <div className="w-full lg:w-[410px] h-[200px] flex flex-col mt-10 px-4">
-                        <span className="font-semibold text-[24px] lg:text-[37px] leading-[28px] lg:leading-[43px] text-white">
+                    <div className="w-full lg:w-[410px] h-auto flex flex-col mt-10 px-4">
+                        <span className="lg:w-[420px] h-[87px] font-semibold text-[24px] lg:text-[37px] leading-[28px] lg:leading-[43px] text-white">
                             Your information is well protected with us...
                         </span>
-                        <a href="#" className="w-[140px] lg:w-[200px] text-[10px] p-4 mt-2 bg-[#076F32] text-white text-center">
-                            Call us: 0894756893
-                        </a>
+
+                        <div className="lg:w-[1200px] lg:h-[100px] mt-2 py-2 flex gap-2 lg:flex-row flex-col items-center justify-between">
+                            <div>
+                                <div className="flex flex-col items-center text-center ">
+                                    <div className="bg-green-200 text-green-500 p-2 rounded-full">
+                                        <FaLock className="w-4 h-4" />
+                                    </div>
+                                    <h3 className="text-lg text-white font-semibold">End-to-End Encryption</h3>
+                                    <p className="text-sm text-white">
+                                        All communications are fully encrypted and secured.
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="flex flex-col items-center text-center ">
+                                    <div className="bg-green-200 text-green-500 p-2 rounded-full">
+                                        <FaShieldAlt className="w-4 h-4" />
+                                    </div>
+                                    <h3 className="text-lg text-white font-semibold">Legal Protection</h3>
+                                    <p className="text-sm text-white">
+                                        Complete whistleblower protection under Act 720.
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="flex flex-col items-center text-center">
+                                    <div className="bg-green-200 text-green-500 p-2 rounded-full">
+                                        <FaUserShield className="w-4 h-4" />
+                                    </div>
+                                    <h3 className="text-lg text-white font-semibold">Professional Handling</h3>
+                                    <p className="text-sm text-white">
+                                        Expert analysis and secure case management.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
                     </div>
 
                     {/* Flag Image */}
-                    <div className="mt-4 lg:mt-0 absolute bottom-0 right-0 lg:relative lg:right-auto lg:bottom-auto">
+                    <div className="hidden lg:block mt-4 lg:mt-0 absolute bottom-0 right-0 lg:relative lg:right-auto lg:bottom-auto">
                         <img
                             src={flag2}
                             alt="Ghana Flag"

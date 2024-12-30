@@ -1,12 +1,18 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
 import logo from "../assets/hero/oral_logo.png";
+import { FaFile, FaPhone, FaRegClock } from "react-icons/fa";
 
 export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const [activeLink, setActiveLink] = useState("/"); // Track active link
+    const location = useLocation(); // Get the current location
+    const [activeLink, setActiveLink] = useState(location.pathname);
+
+    useEffect(() => {
+        setActiveLink(location.pathname); // Update active link when the location changes
+    }, [location]);
 
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!mobileMenuOpen);
@@ -16,20 +22,31 @@ export default function Navbar() {
         setMobileMenuOpen(false);
     };
 
-    const handleLinkClick = (link) => {
-        setActiveLink(link); // Set clicked link as active
-        closeMobileMenu(); // Close mobile menu on link click
-    };
-
     return (
         <header className="w-full">
             {/* Top banner */}
             <div className="w-full bg-[#0B5C2C] text-white py-2">
-                <div className="container mx-auto px-4">
-                    <p className="text-center text-sm font-medium tracking-wider">
+                <div className="container mx-auto lg:px-20 px-4 flex justify-between items-center flex-wrap gap-4">
+                    <div className="flex items-center gap-2">
+                        <FaRegClock />
+                        <span>All systems operational</span>
+                    </div>
+                    <p className="text-center text-sm font-medium tracking-wider whitespace-nowrap">
                         TEAM_ORAL
                     </p>
+                    <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-2">
+                            <FaPhone />
+                            <a href="/contact">Contact</a>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <FaFile />
+                            <a href="#">Resources</a>
+                        </div>
+                    </div>
                 </div>
+
+
             </div>
 
             {/* Main navigation */}
@@ -62,7 +79,6 @@ export default function Navbar() {
                             to="/"
                             className={`${activeLink === "/" ? "text-green-500 underline" : "text-[#0B5C2C]"
                                 } hover:text-[#0B5C2C]/80 font-medium`}
-                            onClick={() => handleLinkClick("/")}
                         >
                             Home
                         </Link>
@@ -70,7 +86,6 @@ export default function Navbar() {
                             to="/about"
                             className={`${activeLink === "/about" ? "text-green-500 underline" : "text-[#0B5C2C]"
                                 } hover:text-[#0B5C2C]/80 font-medium`}
-                            onClick={() => handleLinkClick("/about")}
                         >
                             About us
                         </Link>
@@ -78,7 +93,6 @@ export default function Navbar() {
                             to="/blog"
                             className={`${activeLink === "/blog" ? "text-green-500 underline" : "text-[#0B5C2C]"
                                 } hover:text-[#0B5C2C]/80 font-medium`}
-                            onClick={() => handleLinkClick("/blog")}
                         >
                             Blog
                         </Link>
@@ -86,7 +100,6 @@ export default function Navbar() {
                             to="/report"
                             className={`${activeLink === "/report" ? "text-green-500 underline" : "text-[#0B5C2C]"
                                 } hover:text-[#0B5C2C]/80 font-medium`}
-                            onClick={() => handleLinkClick("/report")}
                         >
                             Report issue
                         </Link>
@@ -94,7 +107,6 @@ export default function Navbar() {
                             to="/contact"
                             className={`${activeLink === "/contact" ? "text-green-500 underline" : "text-[#0B5C2C]"
                                 } hover:text-[#0B5C2C]/80 font-medium`}
-                            onClick={() => handleLinkClick("/contact")}
                         >
                             Contact Us
                         </Link>
@@ -117,7 +129,7 @@ export default function Navbar() {
                             to="/"
                             className={`${activeLink === "/" ? "text-green-500 underline" : "text-white"
                                 } text-lg font-medium`}
-                            onClick={() => handleLinkClick("/")}
+                            onClick={closeMobileMenu}
                         >
                             Home
                         </Link>
@@ -125,7 +137,7 @@ export default function Navbar() {
                             to="/about"
                             className={`${activeLink === "/about" ? "text-green-500 underline" : "text-white"
                                 } text-lg font-medium`}
-                            onClick={() => handleLinkClick("/about")}
+                            onClick={closeMobileMenu}
                         >
                             About us
                         </Link>
@@ -133,7 +145,7 @@ export default function Navbar() {
                             to="/blog"
                             className={`${activeLink === "/blog" ? "text-green-500 underline" : "text-white"
                                 } text-lg font-medium`}
-                            onClick={() => handleLinkClick("/blog")}
+                            onClick={closeMobileMenu}
                         >
                             Blog
                         </Link>
@@ -141,7 +153,7 @@ export default function Navbar() {
                             to="/report"
                             className={`${activeLink === "/report" ? "text-green-500 underline" : "text-white"
                                 } text-lg font-medium`}
-                            onClick={() => handleLinkClick("/report")}
+                            onClick={closeMobileMenu}
                         >
                             Report issue
                         </Link>
@@ -149,7 +161,7 @@ export default function Navbar() {
                             to="/contact"
                             className={`${activeLink === "/contact" ? "text-green-500 underline" : "text-white"
                                 } text-lg font-medium`}
-                            onClick={() => handleLinkClick("/contact")}
+                            onClick={closeMobileMenu}
                         >
                             Contact Us
                         </Link>
