@@ -75,18 +75,16 @@ const Hero = () => {
                     <div className="w-full lg:w-1/2 text-white space-y-6 lg:h-full flex flex-col justify-end">
                         {/* Blue Container */}
                         <div className="flex flex-col w-full space-y-4 items-center lg:items-end">
-                            <h1 className="text-3xl lg:text-[56px] w-full h-auto font-bold text-center lg:text-right leading-[1.2] p-2 lg:p-4">
-                                Operation <br />
-                                Recover All Loot
+                            <h1 className="text-3xl lg:text-[44px] w-full h-auto font-bold text-center lg:text-right leading-[1.2] p-2 lg:p-4">
+                                Welcome to ORAL - Operation Recover All Loot
                             </h1>
-
+                            <p className="text-sm lg:text-lg lg:w-[625px] h-auto text-white text-center lg:text-right px-2 lg:px-0">
+                                Combating Corruption, Recovering Resources, Building a Better Ghana
+                            </p>
                             <p className="text-sm lg:text-lg lg:w-[625px] h-auto text-white/80 text-center lg:text-right px-2 lg:px-0">
-                                Operation Recover All Loot stands at the forefront of Ghana&apos;s
-                                fight against corruption, dedicated to investigating financial
-                                impropriety and recovering misappropriated state resources. Through
-                                rigorous investigation, transparent processes, and unwavering
-                                commitment to justice, we work to restore public assets and
-                                strengthen Ghana&apos;s financial integrity.
+                                Operation Recover All Loot (ORAL) is an independent public service initiative under the leadership of President-elect John Dramani Mahama.
+                                Our mission is to investigate corruption cases, recover misappropriated state resources, and prosecute offenders to ensure a transparent and
+                                accountable governance system.
                             </p>
                             <a href="/report" className="text-white bg-[#146221] px-4 lg:px-6 py-2 lg:py-3 font-medium self-center lg:self-end">
                                 Be a Whistle Blower
@@ -94,28 +92,15 @@ const Hero = () => {
                         </div>
 
                         {/* Yellow Container */}
-                        <div className="flex justify-center lg:justify-end mt-4 lg:mt-0">
-                            <button className="bg-[#146221] w-full lg:w-[340px] h-[50px] lg:h-[69px] text-white font-bold">
+                        <div className="flex justify-center lg:justify-end mt-4 lg:mt-0 opacity-0">
+                            <div className="bg-[#146221] w-full lg:w-[340px] h-[50px] lg:h-[69px] text-white font-bold">
                                 Send your Message!
-                            </button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
             </div>
-
-            <section>
-                <div className="flex lg:flex-row flex-col items-center justify-between px-4 lg:px-16 py-4 lg:py-0 bg-[#141415] w-full h-[124px] text-white">
-                    <h2 className="font-bold text-[24px] sm:text-[36px] lg:text-[40px] leading-5 tracking-wide">
-                        Make A Submission
-                    </h2>
-                    <a href="/report" className="w-full sm:w-auto lg:w-[340px] flex items-center justify-center py-3 sm:py-4 lg:py-5 shadow-md bg-white">
-                        <button className="text-[#146221] font-bold text-sm sm:text-base lg:text-lg">
-                            Make your Submission
-                        </button>
-                    </a>
-                </div>
-            </section>
 
 
             <section>
@@ -136,7 +121,7 @@ const Hero = () => {
                         <div className="w-full lg:w-1/2 space-y-6">
                             {/* Flag and Content */}
                             <div className="relative flex">
-                                <div className="absolute lg:top-40 top-[140px] left-0">
+                                <div className="absolute lg:top-44 top-[160px] left-0">
                                     <img
                                         src={flag}
                                         alt="Ghana Flag"
@@ -144,8 +129,8 @@ const Hero = () => {
                                         className="w-[200px] lg:w-full h-auto object-cover"
                                     />
                                 </div>
-                                <div className="space-y-4 w-[528px] h-[174px] flex lg:pl-[200px] pt-4 mx-4 lg:mx-0">
-                                    <span className="text-[12px]">
+                                <div className="space-y-4 w-[528px] h-[174px] 4xl:w-[1000px] lg:w-[800px] flex lg:pl-[200px] pt-4 4xl:pt-0 mx-4 lg:mx-0">
+                                    <span className="text-[11px] lg:text-[15px] 4xl:text-[20px]">
                                         Operation - Recover - All-Loot is a major plank under the president-elect
                                         John Dramani Mahama&apos;s anti-corruption agenda. JM has vowed to make corruption
                                         costly; to severely punish perpetrators and to recover looted funds and assets
@@ -158,15 +143,28 @@ const Hero = () => {
                         </div>
 
                         {/* Right Section */}
-                        <div className="w-full lg:w-1/2 flex items-center justify-center">
+                        <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end lg:px-12 4xl:px-12">
                             <img
                                 src={freedom}
                                 alt="Independence Arch"
                                 loading="lazy"
-                                className="w-3/4 lg:w-[450px] h-auto object-cover"
+                                className="w-3/4 lg:w-[450px] 4xl:w-[500px] h-auto object-cover"
                             />
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <section>
+                <div className="flex lg:flex-row flex-col items-center justify-between px-4 lg:px-16 py-4 lg:py-0 bg-[#141415] w-full h-[124px] text-white">
+                    <h2 className="font-bold text-[24px] sm:text-[36px] lg:text-[40px] leading-5 tracking-wide">
+                        Make A Submission
+                    </h2>
+                    <a href="/report" className="w-full sm:w-auto lg:w-[340px] flex items-center justify-center py-3 sm:py-4 lg:py-5 shadow-md bg-white">
+                        <button className="text-[#146221] font-bold text-sm sm:text-base lg:text-lg">
+                            Make your Submission
+                        </button>
+                    </a>
                 </div>
             </section>
 
@@ -190,7 +188,10 @@ const Hero = () => {
                         {/* News Grid */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 h-auto">
                             {newsItems.map((item) => (
-                                <div key={item.id} className="bg-white border-none rounded-lg overflow-hidden p-4">
+                                <div
+                                    key={item.id}
+                                    className="bg-white border-none rounded-lg overflow-hidden p-4 flex flex-col h-full"
+                                >
                                     <div className="relative w-full h-[280px]">
                                         <img
                                             src={item.image}
@@ -199,9 +200,21 @@ const Hero = () => {
                                             className="object-cover w-full h-full rounded-lg"
                                         />
                                     </div>
-                                    <div className="pt-0">
-                                        <h2 className="text-lg font-semibold mb-2 text-black mt-4">{item.title}</h2>
-                                        <p className="text-gray-600 text-sm mb-4">{item.description}</p>
+                                    {/* Content Section */}
+                                    <div className="flex-grow flex flex-col">
+                                        <h2
+                                            className="text-lg font-semibold w-full text-black h-[55px] overflow-hidden"
+                                        >
+                                            {item.title}
+                                        </h2>
+                                        <p
+                                            className="text-gray-600 text-sm flex-grow mb-4 h-[80px] overflow-hidden"
+                                        >
+                                            {item.description}
+                                        </p>
+                                    </div>
+                                    {/* Read More Link */}
+                                    <div className="mt-auto">
                                         <a
                                             href={item.link}
                                             target="_blank"
@@ -213,15 +226,17 @@ const Hero = () => {
                                 </div>
                             ))}
                         </div>
+
+
                     </div>
                 </div>
             </section>
 
             <section>
                 <div className="w-full lg:h-[240px] bg-black flex flex-col lg:flex-row justify-between pl-6 lg:pl-16 relative">
-                    <div className="w-full lg:w-[410px] h-auto flex flex-col mt-10 px-4">
-                        <span className="lg:w-[420px] h-[87px] font-semibold text-[24px] lg:text-[37px] leading-[28px] lg:leading-[43px] text-white">
-                            Your information is well protected with us...
+                    <div className="w-full lg:w-[410px] h-auto flex flex-col my-10 px-4">
+                        <span className="lg:w-[530px] h-[67px] font-semibold text-[24px] lg:text-[37px] leading-[28px] lg:leading-[43px] text-white">
+                            Your Security is Our Priority
                         </span>
 
                         <div className="lg:w-[1200px] lg:h-[100px] mt-2 py-2 flex gap-2 lg:flex-row flex-col items-center justify-between">

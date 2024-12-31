@@ -20,7 +20,7 @@ const About = () => {
                     className="object-cover w-full h-[300px] sm:h-[400px] md:h-[500px]"
                     loading="lazy"
                 />
-                <div className="absolute top-[60%] sm:top-[65%] md:top-[54%] left-4 sm:left-8 md:left-[60px] transform -translate-y-1/2 sm:-translate-y-0 w-[90%] sm:w-[80%] md:w-[758px] h-auto flex flex-col gap-2 px-4">
+                <div className="absolute top-[60%] sm:top-[65%] md:top-[54%] left-1 sm:left-8 md:left-[60px] transform -translate-y-1/2 sm:-translate-y-0 w-[90%] sm:w-[80%] md:w-[758px] h-auto flex flex-col gap-2 px-4">
                     <h2 className="text-3xl sm:text-4xl font-bold text-white">
                         About Us
                     </h2>
@@ -31,7 +31,7 @@ const About = () => {
             </div>
 
             <section>
-                <div className="flex items-center justify-center px-4 sm:px-6">
+                <div className="flex items-center justify-center 4xl:justify-start 4xl:px-20 px-4">
                     <div className="bg-[#F8F8F8] w-full max-w-[1360px] h-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-6 py-6">
                         {/* Mission Section */}
                         <div className="w-full md:w-[548px] h-full flex flex-col items-start justify-center md:text-left">
@@ -57,15 +57,15 @@ const About = () => {
                 </div>
             </section>
 
-            <section className="py-10 bg-white">
-                <div className="max-w-[1360px] mx-auto px-4 lg:px-0">
+            <section className="py-10  bg-white">
+                <div className="lg:px-20 px-4">
                     <h2 className="text-2xl md:text-3xl font-bold mb-4">Our Approach</h2>
                     <p className="text-sm md:text-base mb-6 text-[#56575D]">
                         ORAL employs a three-pronged strategy:
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {/* Investigation Section */}
-                        <div className="bg-[#F8F8F8] p-6 rounded-md shadow-sm">
+                        <div className="bg-[#F8F8F8] p-6 lg:px-0 rounded-md shadow-sm">
                             <h3 className="font-bold text-lg mb-2">Investigation</h3>
                             <p className="text-sm md:text-base text-[#56575D]">
                                 We conduct thorough, evidence-based investigations into allegations of corruption and financial misconduct, utilizing state-of-the-art forensic tools and methodologies.
@@ -216,8 +216,8 @@ const About = () => {
             <section>
                 <div className="w-full lg:h-[240px] bg-black flex flex-col lg:flex-row justify-between pl-6 lg:pl-16 relative">
                     <div className="w-full lg:w-[410px] h-auto flex flex-col mt-10 px-4">
-                        <span className="lg:w-[420px] h-[87px] font-semibold text-[24px] lg:text-[37px] leading-[28px] lg:leading-[43px] text-white">
-                            Your information is well protected with us...
+                        <span className="lg:w-[530px] h-[67px] font-semibold text-[24px] lg:text-[37px] leading-[28px] lg:leading-[43px] text-white">
+                            Your Security is Our Priority
                         </span>
 
                         <div className="lg:w-[1200px] lg:h-[100px] mt-2 py-2 flex gap-2 lg:flex-row flex-col items-center justify-between">

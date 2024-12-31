@@ -160,8 +160,8 @@ function MainForm() {
             <section>
                 <div className="w-full lg:h-[240px] bg-black flex flex-col lg:flex-row justify-between pl-6 lg:pl-16 relative">
                     <div className="w-full lg:w-[410px] h-auto flex flex-col mt-10 px-4">
-                        <span className="lg:w-[420px] h-[87px] font-semibold text-[24px] lg:text-[37px] leading-[28px] lg:leading-[43px] text-white">
-                            Your information is well protected with us...
+                        <span className="lg:w-[530px] h-[67px] font-semibold text-[24px] lg:text-[37px] leading-[28px] lg:leading-[43px] text-white">
+                            Your Security is Our Priority
                         </span>
 
                         <div className="lg:w-[1200px] lg:h-[100px] mt-2 py-2 flex gap-2 lg:flex-row flex-col items-center justify-between">

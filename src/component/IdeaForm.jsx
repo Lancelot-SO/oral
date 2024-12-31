@@ -7,6 +7,7 @@ import { toast, ToastContainer } from "react-toastify";
 const IdeaForm = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [ideaData, setIdeaData] = useState({
+        full_name: "",
         project_name: "",
         project_description: "",
         email: "",
@@ -28,6 +29,7 @@ const IdeaForm = () => {
         setIsSubmitting(true);
 
         const formData = new FormData();
+        formData.append("full_name", ideaData.full_name);
         formData.append("project_name", ideaData.project_name);
         formData.append("project_description", ideaData.project_description);
         formData.append("email", ideaData.email);
@@ -46,6 +48,7 @@ const IdeaForm = () => {
             );
             toast.success("Submission successful!");
             setIdeaData({
+                full_name: "",
                 project_name: "",
                 project_description: "",
                 email: "",
@@ -63,6 +66,24 @@ const IdeaForm = () => {
         <div>
             <ToastContainer />
             <form onSubmit={handleSubmit} className="max-w-md mx-auto h-[360px] overflow-y-auto border space-y-4">
+                <div className="mb-4">
+                    <label
+                        htmlFor="full_name"
+                        className="block text-lg font-medium text-black smallS8:text-sm md:text-base lg:text-lg"
+                    >
+                        Full Name
+                    </label>
+                    <input
+                        type="text"
+                        id="full_name"
+                        name="full_name"
+                        placeholder="Full Name"
+                        required
+                        value={ideaData.full_name}
+                        onChange={handleChange}
+                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm p-2 smallS8:sm:text-xs smallS8:p-1 md:p-2 md:sm:text-base"
+                    />
+                </div>
                 <div className="mb-4">
                     <label
                         htmlFor="project-name"

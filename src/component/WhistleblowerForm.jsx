@@ -9,6 +9,7 @@ const WhistleblowingForm = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const [whistleData, setWhistleData] = useState({
+        full_name: "",
         email: "",
         mobile_number: "",
         message: "",
@@ -29,6 +30,7 @@ const WhistleblowingForm = () => {
         setIsSubmitting(true);
 
         const formData = new FormData();
+        formData.append("full_name", whistleData.full_name);
         formData.append("email", whistleData.email);
         formData.append("mobile_number", whistleData.mobile_number || "");
         formData.append("message", whistleData.message);
@@ -45,7 +47,7 @@ const WhistleblowingForm = () => {
                 }
             );
             toast.success("Submission successful!");
-            setWhistleData({ email: "", mobile_number: "", message: "" });
+            setWhistleData({ full_name: "", email: "", mobile_number: "", message: "" });
             setFile(null);
         } catch (error) {
             toast.error("Failed to submit. Please try again.");
@@ -58,6 +60,22 @@ const WhistleblowingForm = () => {
         <div>
             <ToastContainer />
             <form onSubmit={handleSubmit} className="max-w-md mx-auto h-[360px] overflow-y-auto border space-y-4">
+                <div className="mb-4">
+                    <label htmlFor="full_name" className="block text-lg font-medium text-black smallS8:text-sm md:text-base lg:text-lg">
+                        Your Full Name
+                    </label>
+                    <input
+                        type="text"
+                        id="full_name"
+                        name="full_name"
+                        placeholder="Your full name"
+                        required
+                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm p-2 smallS8:sm:text-xs smallS8:p-1 md:p-2"
+                        value={whistleData.full_name}
+                        onChange={handleChange}
+                    />
+                </div>
+
                 <div className="mb-4">
                     <label htmlFor="email" className="block text-lg font-medium text-black smallS8:text-sm md:text-base lg:text-lg">
                         Your Email Address
@@ -127,7 +145,6 @@ const WhistleblowingForm = () => {
                 </button>
             </form>
         </div>
-
     );
 };
 

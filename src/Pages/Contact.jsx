@@ -107,7 +107,7 @@ const Contact = () => {
                                     type="submit"
                                     className="w-full bg-[#2B5335] hover:bg-[#234429] text-white font-medium py-2 rounded-md"
                                 >
-                                    Search
+                                    Send
                                 </button>
                             </form>
                         </div>
@@ -152,7 +152,7 @@ const Contact = () => {
                     </div>
 
                     {/* Fax */}
-                    <div className="flex items-center">
+                    {/* <div className="flex items-center">
                         <div className="text-green-600 text-2xl mr-4">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -173,7 +173,7 @@ const Contact = () => {
                             <h4 className="font-bold">FAX</h4>
                             <p className="text-gray-600">0800900111</p>
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* Email */}
                     <div className="flex items-center">
@@ -203,9 +203,9 @@ const Contact = () => {
 
             <section>
                 <div className="w-full lg:h-[240px] bg-black flex flex-col lg:flex-row justify-between pl-6 lg:pl-16 relative">
-                    <div className="w-full lg:w-[410px] h-auto flex flex-col mt-10 px-4">
-                        <span className="lg:w-[420px] h-[87px] font-semibold text-[24px] lg:text-[37px] leading-[28px] lg:leading-[43px] text-white">
-                            Your information is well protected with us...
+                    <div className="w-full lg:w-[410px] h-auto flex flex-col my-10 px-4">
+                        <span className="lg:w-[530px] h-[67px] font-semibold text-[24px] lg:text-[37px] leading-[28px] lg:leading-[43px] text-white">
+                            Your Security is Our Priority
                         </span>
 
                         <div className="lg:w-[1200px] lg:h-[100px] mt-2 py-2 flex gap-2 lg:flex-row flex-col items-center justify-between">

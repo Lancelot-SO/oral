@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
 import logo from "../assets/hero/oral_logo.png";
-import { FaFile, FaPhone, FaRegClock } from "react-icons/fa";
+import { FaRegFileAlt, FaPhone, FaRegClock } from "react-icons/fa";
 
 export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -40,7 +40,7 @@ export default function Navbar() {
                             <a href="/contact">Contact</a>
                         </div>
                         <div className="flex items-center gap-2">
-                            <FaFile />
+                            <FaRegFileAlt />
                             <a href="#">Resources</a>
                         </div>
                     </div>
@@ -90,19 +90,20 @@ export default function Navbar() {
                             About us
                         </Link>
                         <Link
+                            to="/report"
+                            className={`${activeLink === "/report" ? "text-green-500 underline" : "text-[#0B5C2C]"
+                                } hover:text-[#0B5C2C]/80 font-medium`}
+                        >
+                            Report Portal
+                        </Link>
+                        <Link
                             to="/blog"
                             className={`${activeLink === "/blog" ? "text-green-500 underline" : "text-[#0B5C2C]"
                                 } hover:text-[#0B5C2C]/80 font-medium`}
                         >
                             Blog
                         </Link>
-                        <Link
-                            to="/report"
-                            className={`${activeLink === "/report" ? "text-green-500 underline" : "text-[#0B5C2C]"
-                                } hover:text-[#0B5C2C]/80 font-medium`}
-                        >
-                            Report issue
-                        </Link>
+
                         <Link
                             to="/contact"
                             className={`${activeLink === "/contact" ? "text-green-500 underline" : "text-[#0B5C2C]"
@@ -142,20 +143,20 @@ export default function Navbar() {
                             About us
                         </Link>
                         <Link
+                            to="/report"
+                            className={`${activeLink === "/report" ? "text-green-500 underline" : "text-white"
+                                } text-lg font-medium`}
+                            onClick={closeMobileMenu}
+                        >
+                            Report Portal
+                        </Link>
+                        <Link
                             to="/blog"
                             className={`${activeLink === "/blog" ? "text-green-500 underline" : "text-white"
                                 } text-lg font-medium`}
                             onClick={closeMobileMenu}
                         >
                             Blog
-                        </Link>
-                        <Link
-                            to="/report"
-                            className={`${activeLink === "/report" ? "text-green-500 underline" : "text-white"
-                                } text-lg font-medium`}
-                            onClick={closeMobileMenu}
-                        >
-                            Report issue
                         </Link>
                         <Link
                             to="/contact"

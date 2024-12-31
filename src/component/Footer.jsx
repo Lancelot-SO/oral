@@ -30,7 +30,7 @@ const Footer = () => {
 
 
             <footer className="bg-gradient-to-r from-black via-green-900 to-green-700 text-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div className="w-full px-4 lg:pl-20 sm:px-2 py-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
                         {/* Left Section */}
                         <div>
@@ -67,15 +67,15 @@ const Footer = () => {
                         </div>
 
                         {/* Other Sections */}
-                        <div className="col-span-1 md:col-span-2 lg:col-span-4 border-b border-white">
+                        <div className="col-span-1 md:col-span-2 lg:col-span-4 lg:w-[1050px] 4xl:w-[1350px] border-b border-white">
                             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                                 {/* Resources Section */}
                                 <div>
-                                    <h3 className="font-semibold mb-4">Resources</h3>
-                                    <ul className="space-y-2 text-sm">
+                                    <h3 className="font-semibold mb-4 4xl:text-[20px]">Resources</h3>
+                                    <ul className="space-y-2 4xl:space-y-6 text-sm 4xl:text-[20px]">
                                         <li>
                                             <a href="#" className="hover:text-gray-300 hover:underline">
-                                                Reporting
+                                                Reporting Guidelines
                                             </a>
                                         </li>
                                         <li>
@@ -97,8 +97,8 @@ const Footer = () => {
 
                                 {/* Legal & Security Section */}
                                 <div>
-                                    <h3 className="font-semibold mb-4">Legal & Security</h3>
-                                    <ul className="space-y-2 text-sm">
+                                    <h3 className="font-semibold mb-4 4xl:text-[20px]">Legal & Security</h3>
+                                    <ul className="space-y-2 4xl:space-y-6 text-sm 4xl:text-[20px]">
                                         <li>
                                             <button
                                                 onClick={() => setIsPrivacyOpen(true)}
@@ -125,8 +125,8 @@ const Footer = () => {
 
                                 {/* Partner Agencies Section */}
                                 <div>
-                                    <h3 className="font-semibold mb-4">Partner Agencies</h3>
-                                    <ul className="space-y-2 text-sm">
+                                    <h3 className="font-semibold mb-4 4xl:text-[20px]">Partner Agencies</h3>
+                                    <ul className="space-y-2 4xl:space-y-6 text-sm 4xl:text-[20px]">
                                         <li>
                                             <a href="#" className="hover:text-gray-300 hover:underline">
                                                 CHIRAJ
@@ -147,8 +147,8 @@ const Footer = () => {
 
                                 {/* Contact & Support Section */}
                                 <div>
-                                    <h3 className="font-semibold mb-4">Contact & Support</h3>
-                                    <ul className="space-y-2 text-sm">
+                                    <h3 className="font-semibold mb-4 4xl:text-[20px]">Contact & Support</h3>
+                                    <ul className="space-y-2 4xl:space-y-6 text-sm 4xl:text-[20px]">
                                         <li>
                                             <a href="#" className="hover:text-gray-300 hover:underline">
                                                 Secure Contact
@@ -164,32 +164,34 @@ const Footer = () => {
                             </div>
                         </div>
 
+                        {/* Footer Bottom */}
+                        <div className="py-4 text-center lg:text-end lg:w-[1350px] 4xl:w-[1720px] text-xs">
+                            <p className="space-x-4">
+                                <a href="#" className="hover:text-gray-300 4xl:text-[20px] hover:underline">
+                                    Privacy Policy
+                                </a>
+                                <span>|</span>
+                                <a href="#" className="hover:text-gray-300 4xl:text-[20px] hover:underline">
+                                    Terms & Conditions
+                                </a>
+                                <span>|</span>
+                                <a href="#" className="hover:text-gray-300 4xl:text-[20px] hover:underline">
+                                    News
+                                </a>
+                                <span>|</span>
+                                <a href="#" className="hover:text-gray-300 4xl:text-[20px] hover:underline">
+                                    Report
+                                </a>
+                                <span>|</span>
+                                <a href="#" className="hover:text-gray-300 4xl:text-[20px] hover:underline">
+                                    Powered by unknown
+                                </a>
+                            </p>
+                        </div>
+
                     </div>
 
-                    {/* Footer Bottom */}
-                    <div className="py-4 text-center lg:text-end text-xs">
-                        <p className="space-x-4">
-                            <a href="#" className="hover:text-gray-300 hover:underline">
-                                Privacy Policy
-                            </a>
-                            <span>|</span>
-                            <a href="#" className="hover:text-gray-300 hover:underline">
-                                Terms & Conditions
-                            </a>
-                            <span>|</span>
-                            <a href="#" className="hover:text-gray-300 hover:underline">
-                                News
-                            </a>
-                            <span>|</span>
-                            <a href="#" className="hover:text-gray-300 hover:underline">
-                                Report
-                            </a>
-                            <span>|</span>
-                            <a href="#" className="hover:text-gray-300 hover:underline">
-                                Powered by unknown
-                            </a>
-                        </p>
-                    </div>
+
                 </div>
             </footer>
         </div>
