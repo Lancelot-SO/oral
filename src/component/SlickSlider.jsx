@@ -5,8 +5,8 @@ import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import Team1 from "../assets/about/team1.png"
 import Team2 from "../assets/about/team2.png"
 import Team3 from "../assets/about/team3.png"
-import Team4 from "../assets/about/team4.png"
-import Team5 from "../assets/about/team5.png"
+// import Team4 from "../assets/about/team4.png"
+// import Team5 from "../assets/about/team5.png"
 
 
 import "slick-carousel/slick/slick.css";
@@ -51,34 +51,6 @@ const data = [
         list6: `Known for his non-partisan approach to criminal investigations`,
 
     },
-    {
-        id: 4,
-        photo: Team4,
-        name: "MARTIN KPEBU",
-        position: "COMMITEE MEMBER",
-        desc: `A legal luminary with extensive experience in anti-corruption litigation and constitutional law:`,
-        list1: `Successfully litigated numerous high-profile corruption cases in Ghana's superior courts`,
-        list2: `Pioneered several public interest cases that strengthened anti-corruption legal frameworks`,
-        list3: `Served as legal consultant to various international anti-corruption organizations`,
-        list4: `Published extensively on anti-corruption law and public accountability`,
-        list5: `Demonstrated consistent independence in handling politically sensitive cases`,
-        list6: `Regular resource person for judicial training on corruption-related cases`,
-    },
-    {
-        id: 5,
-        photo: Team5,
-        name: "Raymond Archer",
-        position: "COMMITEE MEMBER",
-        desc: `An internationally recognized investigative journalist with over two decades of exposing corruption:`,
-        list1: `Led investigations that uncovered major financial scandals across multiple sectors `,
-        list2: `Developed innovative investigative methodologies now used as industry standards`,
-        list3: `Received multiple international awards for investigative journalism excellence `,
-        list4: `Successfully collaborated with law enforcement agencies to secure prosecutions`,
-        list5: `Maintained strict editorial independence throughout his career `,
-        list6: `Built extensive networks for tracking illegal financial flows`,
-        list7: `Demonstrated expertise in forensic document analysis and financial investigation `,
-
-    },
 
     // Additional board members can be added here...
 ];
@@ -91,7 +63,7 @@ const SlickSlider = () => {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 2,
+        slidesToShow: 3,
         slidesToScroll: 1,
         initialSlide: 0,
         centerMode: true,
@@ -100,7 +72,7 @@ const SlickSlider = () => {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                     slidesToScroll: 1,
                     infinite: true,
                     dots: true,
@@ -125,51 +97,66 @@ const SlickSlider = () => {
     };
 
     return (
-        <div className="relative overflow-hidden lg:pl-16 px-2 pt-10 lg:h-[700px] h-auto">
+        <div className="relative overflow-hidden lg:pl-16 px-2 pt-10 lg:h-[900px] h-auto">
             <div className="text-left mb-12">
-                <h2 className="lg:text-4xl text-[20px] font-bold leading-tight">Meet the Team</h2>
+                <h2 className="lg:text-4xl text-[20px] font-bold leading-tight">Team Profile</h2>
                 <p className="lg:w-[580px] h-[40px] lg:text-lg text-[14px] text-gray-600 mt-2 ">
-                    Our board consists of highly accomplished financial services experts with a combined wealth of experience spanning more than two centuries.                </p>
+                    Our board consists of highly accomplished financial services experts with
+                    a combined wealth of experience spanning more than two centuries.                    </p>
             </div>
-            <div className="relative">
+            <div className="relative lg:h-[800px] h-[580px]">
                 <Slider ref={sliderRef} {...settings}>
-                    {data.map((item, index) => (
-                        <div key={index} className="lg:px-4 px-0">
-                            <div className="flex lg:flex-row flex-col w-full lg:h-[420px] h-[800px] shadow-lg overflow-hidden rounded-lg">
+                    {data.map((item) => (
+                        <div key={item.id} className="lg:px-4 px-0">
+                            {/* Card Design */}
+                            <div className="bg-white shadow-lg rounded-lg overflow-hidden lg:w-[400px] w-[330px] mx-auto relative lg:h-[590px] h-[500px]">
                                 {/* Image Section */}
-                                <div className="lg:w-[433px] bg-[#EFEFF0]">
+                                <div className="group relative w-full lg:h-[500px] h-[400px]">
                                     <img
                                         src={item.photo}
                                         alt={item.name}
-                                        loading="lazy"
-                                        className="lg:w-full lg:h-full w-[350px] h-[280px] object-cover"
+                                        className="w-full h-full object-cover"
                                     />
+
+                                    {/* Hover Overlay Section */}
+                                    <div className="absolute lg:h-[500px] h-[400px] bottom-0 left-0 bg-gradient-to-b from-[#387A69] to-[#161F21] text-white p-4 flex flex-col items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                                        <p className="lg:text-sm text-[10px] mb-4">{item.desc}</p>
+                                        <ul className="lg:text-sm text-[10px] list-disc list-inside space-y-1">
+                                            <li>{item.list1}</li>
+                                            <li>{item.list2}</li>
+                                            <li>{item.list3}</li>
+                                            <li>{item.list4}</li>
+                                            {item.list5 && <li>{item.list5}</li>}
+                                            {item.list6 && <li>{item.list6}</li>}
+                                        </ul>
+                                    </div>
                                 </div>
-                                {/* Text Section */}
-                                <div className="lg:w-1/2 h-auto lg:h-full bg-[#238931] text-white lg:p-2 p-2 flex flex-col ">
-                                    <div className="flex flex-col w-[234px] h-[54px] bg-[#CC1526] rounded-tr-[16px] rounded-bl-[20px] items-center justify-center mb-2">
-                                        <h3 className="font-bold text-[13px] leading-[17px]">{item.name}</h3>
-                                        <p className="font-normal text-[9px] leading-[17px]">{item.position}</p>
-                                    </div>
-                                    <p className="text-sm text-whte w-full text-[12px]">{item.desc}</p>
-                                    <div className="list-disc pl-5">
-                                        <p className="text-[10px] text-white leading-[24px]">{item.list1}</p>
-                                        <p className="text-[10px] text-white leading-[24px]">{item.list2}</p>
-                                        <p className="text-[10px] text-white leading-[24px]">{item.list3}</p>
-                                        <p className="text-[10px] text-white leading-[24px]">{item.list4}</p>
-                                        <p className="text-[10px] text-white leading-[24px]">{item.list5}</p>
-                                        <p className="text-[10px] text-white leading-[24px]">{item.list6}</p>
-                                        <p className="text-[10px] text-white leading-[24px]">{item.list7}</p>
-                                    </div>
+
+                                {/* Position Text Overlay */}
+                                <div className="w-[230px] h-[60px] bg-white absolute bottom-[75px] left-[15%] px-2 py-1 rounded flex flex-col items-center justify-center">
+                                    <h3 className="text-[18px] font-medium text-[#146221] uppercase">
+                                        {item.position}
+                                    </h3>
+                                    <div className="bottom-0 left-4 w-[20px] h-[1px] text-[#146221]"></div>
+                                </div>
+
+                                {/* Name Section */}
+                                <div className="w-[230px] h-[60px] absolute bottom-4 left-[15%] flex items-center justify-center">
+                                    <h4 className="text-[20px] font-bold text-center text-gray-900">
+                                        {item.name}
+                                    </h4>
                                 </div>
                             </div>
                         </div>
+
+
+
                     ))}
                 </Slider>
             </div>
             {/* Previous Button */}
             <button
-                className={`absolute hover:bg-[#FF0226] hover:text-white lg:top-[670px] top-[900px] lg:right-40 right-10 transform -translate-y-1/2 px-4 py-2 rounded-lg 
+                className={`absolute hover:bg-[#146221] hover:text-white lg:top-[850px] top-[715px] lg:right-60 right-10 transform -translate-y-1/2 px-4 py-2 rounded-lg 
                    `}
                 onClick={() => sliderRef.current.slickPrev()}
             >
@@ -178,7 +165,7 @@ const SlickSlider = () => {
 
             {/* Next Button */}
             <button
-                className={`absolute hover:bg-[#FF0226] hover:text-white lg:top-[670px] top-[900px] lg:right-20 transform -translate-y-1/2 px-4 py-2 rounded-lg 
+                className={`absolute hover:bg-[#146221] hover:text-white lg:top-[850px] top-[715px] lg:right-40 transform -translate-y-1/2 px-4 py-2 rounded-lg 
                     `}
                 onClick={() => sliderRef.current.slickNext()}
             >

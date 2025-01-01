@@ -7,6 +7,7 @@ import Blog3 from "../assets/blog/blog3.png"
 import Blog4 from "../assets/blog/blog4.png"
 import Blog5 from "../assets/blog/blog5.png"
 import Blog6 from "../assets/blog/blog6.png"
+import security from "../assets/hero/security.png"
 
 
 
@@ -233,6 +234,51 @@ const Blog = () => {
                 </div>
             </div>
 
+            <section>
+                <div className="relative bg-black py-10">
+                    <div className="container mx-auto flex flex-col lg:flex-row items-center px-4 lg:px-16 mt-6 lg:mt-0">
+                        {/* Left Section */}
+                        <div className="text-white text-center lg:text-left mb-6 lg:mb-0">
+                            <h2 className="text-[25px] sm:text-[30px] lg:text-[35px] font-medium w-full lg:w-[301px]">
+                                YOUR SECURITY IS OUR PRIORITY
+                            </h2>
+                        </div>
+
+                        {/* Right Section */}
+                        <div className="flex flex-wrap justify-center lg:ml-[280px] ml-0 gap-6">
+                            {/* Card 1 */}
+                            <div className="w-full sm:w-[250px] h-[110px] bg-gradient-to-r from-[#161F21] to-[#387A69] p-4 sm:p-6 text-white">
+                                <h3 className="text-[13px] font-semibold mb-2">END-TO-END ENCRYPTION</h3>
+                                <p className="text-sm">All communications are fully encrypted and secured.</p>
+                            </div>
+
+                            {/* Card 2 */}
+                            <div className="w-full sm:w-[250px] h-[110px] bg-gradient-to-r from-[#161F21] to-[#387A69] p-4 sm:p-6 text-white">
+                                <h3 className="text-[13px] font-semibold mb-2">LEGAL PROTECTION</h3>
+                                <p className="text-sm">Complete whistleblower protection under Act 720.</p>
+                            </div>
+
+                            {/* Card 3 */}
+                            <div
+                                className="w-full sm:w-[250px] h-[110px] bg-cover bg-center text-white p-4 flex flex-col justify-end"
+                                style={{
+                                    backgroundImage: `url(${security})`,
+                                }}
+                            >
+                                <h3 className="text-[13px] font-semibold mb-1">PROFESSIONAL HANDLING</h3>
+                                <p className="text-sm">Expert analysis and secure case management.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Floating Button */}
+                    <div className="absolute right-2 lg:top-0 top-6 transform -translate-y-1/2">
+                        <div className="bg-gradient-to-b from-[#387A69] to-[#161F21] text-white text-center rounded-full w-20 h-20 sm:w-28 sm:h-28 flex items-center justify-center shadow-md">
+                            <span className="text-xs sm:text-sm font-semibold">Send YOUR Complaint</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };

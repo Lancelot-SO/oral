@@ -2,11 +2,10 @@
 import React, { useRef } from 'react'
 import contactbg from "../assets/contact/contactbg.png"
 import contact from "../assets/contact/contact1.png"
-import flag2 from "../assets/hero/flag2.png"
 import emailjs from '@emailjs/browser';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { FaLock, FaShieldAlt, FaUserShield } from 'react-icons/fa';
+import security from "../assets/hero/security.png"
 
 const Contact = () => {
     const form = useRef();
@@ -202,59 +201,47 @@ const Contact = () => {
             </div>
 
             <section>
-                <div className="w-full lg:h-[240px] bg-black flex flex-col lg:flex-row justify-between pl-6 lg:pl-16 relative">
-                    <div className="w-full lg:w-[410px] h-auto flex flex-col my-10 px-4">
-                        <span className="lg:w-[530px] h-[67px] font-semibold text-[24px] lg:text-[37px] leading-[28px] lg:leading-[43px] text-white">
-                            Your Security is Our Priority
-                        </span>
-
-                        <div className="lg:w-[1200px] lg:h-[100px] mt-2 py-2 flex gap-2 lg:flex-row flex-col items-center justify-between">
-                            <div>
-                                <div className="flex flex-col items-center text-center ">
-                                    <div className="bg-green-200 text-green-500 p-2 rounded-full">
-                                        <FaLock className="w-4 h-4" />
-                                    </div>
-                                    <h3 className="text-lg text-white font-semibold">End-to-End Encryption</h3>
-                                    <p className="text-sm text-white">
-                                        All communications are fully encrypted and secured.
-                                    </p>
-                                </div>
-                            </div>
-                            <div>
-                                <div className="flex flex-col items-center text-center ">
-                                    <div className="bg-green-200 text-green-500 p-2 rounded-full">
-                                        <FaShieldAlt className="w-4 h-4" />
-                                    </div>
-                                    <h3 className="text-lg text-white font-semibold">Legal Protection</h3>
-                                    <p className="text-sm text-white">
-                                        Complete whistleblower protection under Act 720.
-                                    </p>
-                                </div>
-                            </div>
-                            <div>
-                                <div className="flex flex-col items-center text-center">
-                                    <div className="bg-green-200 text-green-500 p-2 rounded-full">
-                                        <FaUserShield className="w-4 h-4" />
-                                    </div>
-                                    <h3 className="text-lg text-white font-semibold">Professional Handling</h3>
-                                    <p className="text-sm text-white">
-                                        Expert analysis and secure case management.
-                                    </p>
-                                </div>
-                            </div>
-
+                <div className="relative bg-black py-10">
+                    <div className="container mx-auto flex flex-col lg:flex-row items-center px-4 lg:px-16 mt-6 lg:mt-0">
+                        {/* Left Section */}
+                        <div className="text-white text-center lg:text-left mb-6 lg:mb-0">
+                            <h2 className="text-[25px] sm:text-[30px] lg:text-[35px] font-medium w-full lg:w-[301px]">
+                                YOUR SECURITY IS OUR PRIORITY
+                            </h2>
                         </div>
 
+                        {/* Right Section */}
+                        <div className="flex flex-wrap justify-center lg:ml-[280px] ml-0 gap-6">
+                            {/* Card 1 */}
+                            <div className="w-full sm:w-[250px] h-[110px] bg-gradient-to-r from-[#161F21] to-[#387A69] p-4 sm:p-6 text-white">
+                                <h3 className="text-[13px] font-semibold mb-2">END-TO-END ENCRYPTION</h3>
+                                <p className="text-sm">All communications are fully encrypted and secured.</p>
+                            </div>
+
+                            {/* Card 2 */}
+                            <div className="w-full sm:w-[250px] h-[110px] bg-gradient-to-r from-[#161F21] to-[#387A69] p-4 sm:p-6 text-white">
+                                <h3 className="text-[13px] font-semibold mb-2">LEGAL PROTECTION</h3>
+                                <p className="text-sm">Complete whistleblower protection under Act 720.</p>
+                            </div>
+
+                            {/* Card 3 */}
+                            <div
+                                className="w-full sm:w-[250px] h-[110px] bg-cover bg-center text-white p-4 flex flex-col justify-end"
+                                style={{
+                                    backgroundImage: `url(${security})`,
+                                }}
+                            >
+                                <h3 className="text-[13px] font-semibold mb-1">PROFESSIONAL HANDLING</h3>
+                                <p className="text-sm">Expert analysis and secure case management.</p>
+                            </div>
+                        </div>
                     </div>
 
-                    {/* Flag Image */}
-                    <div className="hidden lg:block mt-4 lg:mt-0 absolute bottom-0 right-0 lg:relative lg:right-auto lg:bottom-auto">
-                        <img
-                            src={flag2}
-                            alt="Ghana Flag"
-                            className="w-[200px] lg:w-auto h-auto"
-                            loading="lazy"
-                        />
+                    {/* Floating Button */}
+                    <div className="absolute right-2 lg:top-0 top-6 transform -translate-y-1/2">
+                        <div className="bg-gradient-to-b from-[#387A69] to-[#161F21] text-white text-center rounded-full w-20 h-20 sm:w-28 sm:h-28 flex items-center justify-center shadow-md">
+                            <span className="text-xs sm:text-sm font-semibold">Send YOUR Complaint</span>
+                        </div>
                     </div>
                 </div>
             </section>
