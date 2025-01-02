@@ -70,7 +70,7 @@ const Footer = () => {
                         <div className="col-span-1 md:col-span-2 lg:col-span-4 lg:w-[1050px] 4xl:w-[1350px] border-b border-white">
                             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                                 {/* Resources Section */}
-                                <div>
+                                <div className="lg:w-full w-[170px]">
                                     <h3 className="font-semibold mb-4 4xl:text-[20px]">Resources</h3>
                                     <ul className="space-y-2 4xl:space-y-6 text-sm 4xl:text-[20px]">
                                         <li>
@@ -81,7 +81,7 @@ const Footer = () => {
                                         <li>
                                             <button
                                                 onClick={() => setIsWhistleProtectionOpen(true)}
-                                                className="hover:text-gray-300 cursor-pointer hover:underline">
+                                                className="hover:text-gray-300 cursor-pointer text-[13px] hover:underline">
                                                 Whistleblower Protection
                                             </button>
                                         </li>

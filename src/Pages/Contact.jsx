@@ -6,6 +6,7 @@ import emailjs from '@emailjs/browser';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import security from "../assets/hero/security.png"
+import { FaPhone } from 'react-icons/fa';
 
 const Contact = () => {
     const form = useRef();
@@ -129,50 +130,14 @@ const Contact = () => {
                     {/* Phone */}
                     <div className="flex items-center">
                         <div className="text-green-600 text-2xl mr-4">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                strokeWidth={2}
-                                stroke="currentColor"
-                                className="w-8 h-8"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M3 8.25v-1.5A2.25 2.25 0 015.25 4.5h1.5m9 0h1.5A2.25 2.25 0 0120.25 6.75v1.5m-15 9v1.5a2.25 2.25 0 002.25 2.25h1.5m9 0h1.5a2.25 2.25 0 002.25-2.25v-1.5m-3.75-15v15m-6.75-15v15m-6.75-15h15m-15 15h15"
-                                />
-                            </svg>
+                            <FaPhone />
                         </div>
                         <div>
-                            <h4 className="font-bold">PHONE</h4>
-                            <p className="text-gray-600">0800900111</p>
+                            <h4 className="font-bold">Phone</h4>
+                            <p className="text-gray-600">080 - 090 - 011 - 1</p>
                         </div>
                     </div>
 
-                    {/* Fax */}
-                    {/* <div className="flex items-center">
-                        <div className="text-green-600 text-2xl mr-4">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                strokeWidth={2}
-                                stroke="currentColor"
-                                className="w-8 h-8"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M16.5 7.5h1.75a2.25 2.25 0 012.25 2.25v9.75a2.25 2.25 0 01-2.25 2.25H5.75a2.25 2.25 0 01-2.25-2.25V9.75A2.25 2.25 0 015.75 7.5H7.5m9 0V4.5m0 0h-6v3m6 0H6m9 0v9m-6-3h6m-6 3h6"
-                                />
-                            </svg>
-                        </div>
-                        <div>
-                            <h4 className="font-bold">FAX</h4>
-                            <p className="text-gray-600">0800900111</p>
-                        </div>
-                    </div> */}
 
                     {/* Email */}
                     <div className="flex items-center">
@@ -238,7 +203,7 @@ const Contact = () => {
                     </div>
 
                     {/* Floating Button */}
-                    <div className="absolute right-2 lg:top-0 top-6 transform -translate-y-1/2">
+                    <div className="hidden lg:block absolute right-2 lg:top-0 top-6 transform -translate-y-1/2">
                         <div className="bg-gradient-to-b from-[#387A69] to-[#161F21] text-white text-center rounded-full w-20 h-20 sm:w-28 sm:h-28 flex items-center justify-center shadow-md">
                             <span className="text-xs sm:text-sm font-semibold">Send YOUR Complaint</span>
                         </div>
