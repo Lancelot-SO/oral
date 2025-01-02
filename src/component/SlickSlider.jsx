@@ -5,8 +5,8 @@ import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import Team1 from "../assets/about/team1.png"
 import Team2 from "../assets/about/team2.png"
 import Team3 from "../assets/about/team3.png"
-// import Team4 from "../assets/about/team4.png"
-// import Team5 from "../assets/about/team5.png"
+import Team4 from "../assets/about/team4.png"
+import Team5 from "../assets/about/team5.png"
 
 
 import "slick-carousel/slick/slick.css";
@@ -40,18 +40,44 @@ const data = [
     {
         id: 3,
         photo: Team3,
-        name: "COP (RTD.) Nathaniel KOFI BOAKYE",
+        name: "MARTIN KPEBU",
         position: "COMMITEE MEMBER",
         desc: `A career law enforcement professional with over three decades of distinguished service:`,
+        list1: `Successfully litigated numerous high-profile corruption cases in Ghana's superior courts`,
+        list2: `Pioneered several public interest cases that strengthened anti-corruption legal frameworks`,
+        list3: `Served as legal consultant to various international anti-corruption organizations`,
+        list4: `Published extensively on anti-corruption law and public accountability`,
+        list5: `Demonstrated consistent independence in handling politically sensitive cases`,
+        list6: `Regular resource person for judicial training on corruption-related cases`,
+    },
+    {
+        id: 4,
+        photo: Team4,
+        name: "COP(RTD.) NATHANIEL KOFI BOAKYE",
+        position: "COMMITEE MEMBER",
+        desc: `A legal luminary with extensive experience in anti-corruption litigation and constitutional law:`,
         list1: `Led numerous successful investigations into complex financial crimes and corruption cases`,
         list2: `Developed specialized investigative protocols for tracking illicit financial flows`,
         list3: `Established inter-agency collaboration frameworks that improved prosecution success rates`,
         list4: `Served as lead investigator on several high-profile corruption cases with consistent success`,
         list5: `Maintained an unblemished record of professional integrity throughout his career`,
         list6: `Known for his non-partisan approach to criminal investigations`,
+    },
+    {
+        id: 5,
+        photo: Team5,
+        name: "Raymond Archer",
+        position: "COMMITEE MEMBER",
+        desc: `An internationally recognized investigative journalist with over two decades of exposing corruption:`,
+        list1: `Led investigations that uncovered major financial scandals across multiple sectors `,
+        list2: `Developed innovative investigative methodologies now used as industry standards`,
+        list3: `Received multiple international awards for investigative journalism excellence `,
+        list4: `Successfully collaborated with law enforcement agencies to secure prosecutions`,
+        list5: `Maintained strict editorial independence throughout his career `,
+        list6: `Built extensive networks for tracking illegal financial flows`,
+        list7: `Demonstrated expertise in forensic document analysis and financial investigation `,
 
     },
-
     // Additional board members can be added here...
 ];
 
@@ -122,12 +148,13 @@ const SlickSlider = () => {
                                     <div className="absolute lg:h-[500px] h-[400px] bottom-0 left-0 bg-gradient-to-b from-[#387A69] to-[#161F21] text-white p-4 flex flex-col items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
                                         <p className="lg:text-sm text-[10px] mb-4">{item.desc}</p>
                                         <ul className="lg:text-sm text-[10px] list-disc list-inside space-y-1">
-                                            <li>{item.list1}</li>
-                                            <li>{item.list2}</li>
-                                            <li>{item.list3}</li>
-                                            <li>{item.list4}</li>
-                                            {item.list5 && <li>{item.list5}</li>}
-                                            {item.list6 && <li>{item.list6}</li>}
+                                            <li className="mb-4">{item.list1}</li>
+                                            <li className="mb-4">{item.list2}</li>
+                                            <li className="mb-4">{item.list3}</li>
+                                            <li className="mb-4">{item.list4}</li>
+                                            {item.list5 && <li className="mb-4">{item.list5}</li>}
+                                            {item.list6 && <li className="mb-4">{item.list6}</li>}
+                                            {item.list7 && <li className="">{item.list7}</li>}
                                         </ul>
                                     </div>
                                 </div>
