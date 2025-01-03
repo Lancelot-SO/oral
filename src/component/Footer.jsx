@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaInstagram, FaTiktok } from "react-icons/fa";
 import footerImg from "../assets/footer/footerImg.png";
 import WhistleProtection from "./WhistleProtection";
 import WhistleRight from "./WhistleRight";
@@ -62,6 +62,13 @@ const Footer = () => {
                                     aria-label="Instagram"
                                 >
                                     <FaInstagram className="w-6 h-6" />
+                                </a>
+                                <a
+                                    href="#"
+                                    className="text-white hover:text-gray-300"
+                                    aria-label="Instagram"
+                                >
+                                    <FaTiktok className="w-6 h-6" />
                                 </a>
                             </div>
                         </div>

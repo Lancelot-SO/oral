@@ -19,7 +19,7 @@ const About = () => {
                     className="object-cover w-full h-[300px] sm:h-[400px] md:h-[500px]"
                     loading="lazy"
                 />
-                <div className="absolute top-[60%] sm:top-[65%] md:top-[54%] left-1 sm:left-8 md:left-[60px] transform -translate-y-1/2 sm:-translate-y-0 w-[90%] sm:w-[80%] md:w-[758px] h-auto flex flex-col gap-2 px-4">
+                <div className="absolute top-[60%] sm:top-[65%] md:top-[54%] lg:left-[60px] left-1 sm:left-8 md:left-[6px] transform -translate-y-1/2 sm:-translate-y-0 w-[90%] sm:w-[80%] md:w-[758px] h-auto flex flex-col gap-2 px-4">
                     <h2 className="text-3xl sm:text-4xl font-bold text-white">
                         About Us
                     </h2>
@@ -249,7 +249,7 @@ const About = () => {
                     </div>
 
                     {/* Floating Button */}
-                    <div className="hidden lg:block absolute right-2 lg:top-0 top-6 transform -translate-y-1/2">
+                    <div className="hidden absolute right-2 lg:top-0 top-6 transform -translate-y-1/2">
                         <div className="bg-gradient-to-b from-[#387A69] to-[#161F21] text-white text-center rounded-full w-20 h-20 sm:w-28 sm:h-28 flex items-center justify-center shadow-md">
                             <span className="text-xs sm:text-sm font-semibold">Send YOUR Complaint</span>
                         </div>

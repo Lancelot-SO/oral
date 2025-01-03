@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
+import emailjs from '@emailjs/browser';
 
 const WhistleblowingForm = () => {
+    const form = useRef(null); // Reference for the form
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const [whistleData, setWhistleData] = useState({
@@ -35,10 +37,11 @@ const WhistleblowingForm = () => {
         formData.append("mobile_number", whistleData.mobile_number || "");
         formData.append("message", whistleData.message);
         if (file) {
-            formData.append("attachment", file);
+            formData.append("file", file);
         }
 
         try {
+            // Step 1: Save data to the database (API submission)
             await axios.post(
                 "https://oralgh-api.interactivedigital.com.gh/api/whistleblower-submission",
                 formData,
@@ -46,6 +49,21 @@ const WhistleblowingForm = () => {
                     headers: { "Content-Type": "multipart/form-data" },
                 }
             );
+
+            // Step 2: Send email via EmailJS
+            emailjs.sendForm('service_vkup62k', 'template_pxt9jok', form.current, {
+                publicKey: 'aV-FvEfOZg7fbxTN2',
+            }).then(
+                () => {
+                    toast.success('Whistleblowing message sent successfully!');
+                },
+                (error) => {
+                    toast.error('Failed to send message via email. Please try again.');
+                    console.error("EmailJS Error: ", error);
+                }
+            );
+
+            // Success message for submission
             toast.success("Submission successful!");
             setWhistleData({ full_name: "", email: "", mobile_number: "", message: "" });
             setFile(null);
@@ -59,7 +77,7 @@ const WhistleblowingForm = () => {
     return (
         <div>
             <ToastContainer />
-            <form onSubmit={handleSubmit} className="max-w-md mx-auto h-[360px] overflow-y-auto border space-y-4">
+            <form ref={form} encType="multipart/form-data" method="post" onSubmit={handleSubmit} className="max-w-md mx-auto h-[360px] overflow-y-auto border space-y-4">
                 <div className="mb-4">
                     <label htmlFor="full_name" className="block text-lg font-medium text-black smallS8:text-sm md:text-base lg:text-lg">
                         Your Full Name
@@ -130,7 +148,7 @@ const WhistleblowingForm = () => {
                     <input
                         type="file"
                         id="file"
-                        name="attachment"
+                        name="file"
                         className="mt-2 block w-full text-sm text-black file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-purple-50 file:text-green-700 hover:file:bg-purple-100 smallS8:file:py-1 smallS8:file:px-2 md:file:py-3 md:file:px-6"
                         onChange={handleFileChange}
                     />

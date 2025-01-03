@@ -187,7 +187,7 @@ const Hero = () => {
                 {/* Reporting Options */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     {/* Secure Portal */}
-                    <div className="flex lg:flex-row flex-col items-center justify-center gap-4 bg-white text-black rounded-lg shadow-md lg:w-[395px] w-full h-[176px]">
+                    <a href="/report" className="flex lg:flex-row flex-col items-center justify-center gap-4 bg-white hover:bg-slate-200 text-black rounded-lg shadow-md lg:w-[395px] w-full h-[176px]">
                         <div className="w-14 h-14 flex items-center justify-center rounded-full border border-green-500 mb-4">
                             <FaShieldAlt className="text-green-500 text-2xl" /> {/* React Icon */}
                         </div>
@@ -195,7 +195,7 @@ const Hero = () => {
                             <h3 className="text-[28px] font-medium">Secure Portal</h3>
                             <p className="text-sm text-gray-500">reporting.oralgh.org</p>
                         </div>
-                    </div>
+                    </a>
 
                     {/* Toll-Free Number */}
                     <div className="flex lg:flex-row flex-col items-center justify-center gap-4 bg-white text-black rounded-lg shadow-md lg:w-[395px] w-full h-[176px]">
@@ -245,40 +245,40 @@ const Hero = () => {
                     {/* Partners Grid */}
                     <div className="flex flex-wrap justify-center gap-8">
                         {/* Partner 1 */}
-                        <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center w-full sm:w-48 h-24">
+                        <a href="https://osp.gov.gh/" target="_blank" className="bg-white hover:bg-slate-100 shadow-md rounded-lg p-4 flex items-center justify-center w-full sm:w-48 h-24">
                             <img
                                 src={partner1}
                                 alt="Office of the Special Prosecutor"
                                 className="max-h-full max-w-full object-cover"
                             />
-                        </div>
+                        </a>
 
                         {/* Partner 2 */}
-                        <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center w-full sm:w-48 h-24">
+                        <a href="https://chraj.gov.gh/" target="_blank" className="bg-white hover:bg-slate-100 shadow-md rounded-lg p-4 flex items-center justify-center w-full sm:w-48 h-24">
                             <img
                                 src={partner2}
                                 alt="Commission on Human Rights & Justice"
                                 className="max-h-full max-w-full object-cover"
                             />
-                        </div>
+                        </a>
 
                         {/* Partner 3 */}
-                        <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center w-full sm:w-48 h-24">
+                        <a href="https://police.gov.gh/en/" target="_blank" className="bg-white hover:bg-slate-100 shadow-md rounded-lg p-4 flex items-center justify-center w-full sm:w-48 h-24">
                             <img
                                 src={partner3}
                                 alt="Ghana Police Service"
                                 className="max-h-full max-w-full object-cover"
                             />
-                        </div>
+                        </a>
 
                         {/* Partner 4 */}
-                        <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center w-full sm:w-48 h-24">
+                        <a href="https://eoco.gov.gh/" target="_blank" className="bg-white hover:bg-slate-100 shadow-md rounded-lg p-4 flex items-center justify-center w-full sm:w-48 h-24">
                             <img
                                 src={partner4}
                                 alt="Economic and Organized Crime Office (EOCO)"
                                 className="max-h-full max-w-full object-cover"
                             />
-                        </div>
+                        </a>
                     </div>
 
                     {/* Ghana Flag */}
@@ -395,7 +395,7 @@ const Hero = () => {
                     </div>
 
                     {/* Floating Button */}
-                    <div className="hidden lg:block absolute right-2 lg:top-0 top-6 transform -translate-y-1/2">
+                    <div className="hidden absolute right-2 lg:top-0 top-6 transform -translate-y-1/2">
                         <div className="bg-gradient-to-b from-[#387A69] to-[#161F21] text-white text-center rounded-full w-20 h-20 sm:w-28 sm:h-28 flex items-center justify-center shadow-md">
                             <span className="text-xs sm:text-sm font-semibold">Send YOUR Complaint</span>
                         </div>

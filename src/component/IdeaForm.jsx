@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useState, useRef } from "react";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
+import emailjs from "@emailjs/browser";
 
 const IdeaForm = () => {
+    const form = useRef(null); // Reference for the form
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [ideaData, setIdeaData] = useState({
         full_name: "",
@@ -35,10 +37,11 @@ const IdeaForm = () => {
         formData.append("email", ideaData.email);
         formData.append("mobile_number", ideaData.mobile_number || "");
         if (file) {
-            formData.append("attachment", file);
+            formData.append("file", file);
         }
 
         try {
+            // Step 1: Submit data to the API
             await axios.post(
                 "https://oralgh-api.interactivedigital.com.gh/api/ideas-submission",
                 formData,
@@ -46,6 +49,26 @@ const IdeaForm = () => {
                     headers: { "Content-Type": "multipart/form-data" },
                 }
             );
+
+            // Step 2: Send an email using EmailJS
+            emailjs
+                .sendForm(
+                    "service_vt0fxil", // Replace with your EmailJS service ID
+                    "template_vb5oime", // Replace with your EmailJS template ID
+                    form.current,
+                    "aV-FvEfOZg7fbxTN2" // Replace with your EmailJS public key
+                )
+                .then(
+                    () => {
+                        toast.success("Idea submitted and email sent successfully!");
+                    },
+                    (error) => {
+                        toast.error("Failed to send the email. Please try again.");
+                        console.error("EmailJS Error: ", error);
+                    }
+                );
+
+            // Reset the form
             toast.success("Submission successful!");
             setIdeaData({
                 full_name: "",
@@ -56,7 +79,7 @@ const IdeaForm = () => {
             });
             setFile(null);
         } catch (error) {
-            toast.error("Failed to submit. Please try again.");
+            toast.error("Failed to submit the idea. Please try again.");
         } finally {
             setIsSubmitting(false);
         }
@@ -65,7 +88,7 @@ const IdeaForm = () => {
     return (
         <div>
             <ToastContainer />
-            <form onSubmit={handleSubmit} className="max-w-md mx-auto h-[360px] overflow-y-auto border space-y-4">
+            <form ref={form} encType="multipart/form-data" method="post" onSubmit={handleSubmit} className="max-w-md mx-auto h-[360px] overflow-y-auto border space-y-4">
                 <div className="mb-4">
                     <label
                         htmlFor="full_name"
@@ -86,7 +109,7 @@ const IdeaForm = () => {
                 </div>
                 <div className="mb-4">
                     <label
-                        htmlFor="project-name"
+                        htmlFor="project_name"
                         className="block text-lg font-medium text-black smallS8:text-sm md:text-base lg:text-lg"
                     >
                         Project Name
@@ -95,7 +118,7 @@ const IdeaForm = () => {
                         type="text"
                         id="project_name"
                         name="project_name"
-                        placeholder='Project Name'
+                        placeholder="Project Name"
                         required
                         value={ideaData.project_name}
                         onChange={handleChange}
@@ -104,20 +127,20 @@ const IdeaForm = () => {
                 </div>
                 <div className="mb-4">
                     <label
-                        htmlFor="message"
+                        htmlFor="project_description"
                         className="block text-lg font-medium text-black smallS8:text-sm md:text-base lg:text-lg"
                     >
                         Project Description
                     </label>
                     <textarea
-                        id="message"
+                        id="project_description"
                         name="project_description"
                         rows="4"
                         placeholder="Type your message here..."
                         required
                         value={ideaData.project_description}
                         onChange={handleChange}
-                        className="mt-1 block w-full border border-gray-300 rounded-md resize-none shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm p-2 smallS8:sm:text-xs smallS8:p-1 md:p-2 md:sm:text-base required"
+                        className="mt-1 block w-full border border-gray-300 rounded-md resize-none shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm p-2 smallS8:sm:text-xs smallS8:p-1 md:p-2 md:sm:text-base"
                     ></textarea>
                 </div>
 
@@ -132,7 +155,7 @@ const IdeaForm = () => {
                         type="email"
                         id="email"
                         name="email"
-                        placeholder='Enter Email Address'
+                        placeholder="Enter Email Address"
                         required
                         value={ideaData.email}
                         onChange={handleChange}
@@ -142,7 +165,7 @@ const IdeaForm = () => {
 
                 <div className="mb-4">
                     <label
-                        htmlFor="phone"
+                        htmlFor="mobile_number"
                         className="block text-lg font-medium text-black smallS8:text-sm md:text-base lg:text-lg"
                     >
                         Your Phone Number
@@ -151,7 +174,7 @@ const IdeaForm = () => {
                         type="tel"
                         id="mobile_number"
                         name="mobile_number"
-                        placeholder='055*****89'
+                        placeholder="055*****89"
                         required
                         value={ideaData.mobile_number}
                         onChange={handleChange}
@@ -169,7 +192,7 @@ const IdeaForm = () => {
                     <input
                         type="file"
                         id="file"
-                        name="attachment"
+                        name="file"
                         onChange={handleFileChange}
                         className="mt-2 block w-full text-sm text-black file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-purple-50 file:text-green-700 hover:file:bg-purple-100 smallS8:file:py-1 smallS8:file:px-2 md:file:py-3 md:file:px-6"
                     />
@@ -184,7 +207,6 @@ const IdeaForm = () => {
                 </button>
             </form>
         </div>
-
     );
 };
 

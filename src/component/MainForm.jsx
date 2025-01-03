@@ -198,7 +198,7 @@ function MainForm() {
                     </div>
 
                     {/* Floating Button */}
-                    <div className="hidden lg:block absolute right-2 lg:top-0 top-6 transform -translate-y-1/2">
+                    <div className="hidden absolute right-2 lg:top-0 top-6 transform -translate-y-1/2">
                         <div className="bg-gradient-to-b from-[#387A69] to-[#161F21] text-white text-center rounded-full w-20 h-20 sm:w-28 sm:h-28 flex items-center justify-center shadow-md">
                             <span className="text-xs sm:text-sm font-semibold">Send YOUR Complaint</span>
                         </div>
