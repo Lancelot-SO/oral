@@ -22,7 +22,7 @@ export default {
         'xl': '1280px',
         'large': '1343px',
         '2xl': '1536px',
-        'xxl': '1620px',
+        'xxl': '1640px',
         'vl': '1728px',
         '3xl': '1800px',
         '4xl': '1920px',

@@ -31,7 +31,7 @@ const About = () => {
 
             <section>
                 <div className="flex items-center justify-center 4xl:justify-start 4xl:px-20 px-4">
-                    <div className="bg-[#F8F8F8] w-full max-w-[1360px] h-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-6 py-6">
+                    <div className="bg-[#F8F8F8] w-full lg:px-16 px-0 h-auto flex flex-col lg:flex-row items-center lg:items-start justify-between gap-6 py-6">
                         {/* Mission Section */}
                         <div className="w-full md:w-[548px] h-full flex flex-col items-start justify-center md:text-left">
                             <h2 className="font-bold text-[20px] md:text-[24px]">Mission</h2>
@@ -129,8 +129,8 @@ const About = () => {
             <section>
                 <div className="w-full h-auto flex flex-col-reverse md:flex-row ">
                     {/* Text Section */}
-                    <div className="md:flex-1 flex items-center justify-center">
-                        <div className="w-full max-w-[400px] h-auto md:h-[208px] flex flex-col pl-[20px] py-6 md:py-0">
+                    <div className="md:flex-1 flex items-center justify-center lg:justify-start">
+                        <div className="w-full max-w-[400px] h-auto md:h-[208px] flex flex-col lg:pl-[80px] pl-4 py-6 md:py-0">
                             <h2 className="text-[24px] md:text-[30px] font-semibold text-black">
                                 Public Participation
                             </h2>
@@ -182,8 +182,8 @@ const About = () => {
             <section>
                 <div className="w-full h-auto flex flex-col-reverse md:flex-row ">
                     {/* Text Section */}
-                    <div className="md:flex-1 flex items-center justify-center">
-                        <div className="w-full max-w-[400px] h-auto md:h-[208px] flex flex-col pl-[20px] py-6 md:py-0">
+                    <div className="md:flex-1 flex items-center justify-center lg:justify-start">
+                        <div className="w-full max-w-[400px] h-auto md:h-[208px] flex flex-col lg:pl-[80px] pl-4 py-6 md:py-0">
                             <h2 className="text-[24px] md:text-[30px] font-semibold text-black">
                                 International Cooperation
                             </h2>
@@ -248,12 +248,7 @@ const About = () => {
                         </div>
                     </div>
 
-                    {/* Floating Button */}
-                    <div className="hidden absolute right-2 lg:top-0 top-6 transform -translate-y-1/2">
-                        <div className="bg-gradient-to-b from-[#387A69] to-[#161F21] text-white text-center rounded-full w-20 h-20 sm:w-28 sm:h-28 flex items-center justify-center shadow-md">
-                            <span className="text-xs sm:text-sm font-semibold">Send YOUR Complaint</span>
-                        </div>
-                    </div>
+
                 </div>
             </section>
 

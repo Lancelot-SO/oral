@@ -76,7 +76,7 @@ const Hero = () => {
                     </div>
 
                     {/* Right Section (Text Content) */}
-                    <div className="w-full lg:w-1/2 text-white space-y-6 lg:h-full flex flex-col justify-end">
+                    <div className="w-full lg:w-1/2 text-white space-y-6 lg:h-full flex flex-col justify-end lg:pr-4 pr-0">
                         {/* Blue Container */}
                         <div className="flex flex-col w-full space-y-2 items-center lg:items-end">
                             <span className="text-3xl lg:text-[38px] h-[55px] inline-block bg-gradient-to-r from-white to-white/30 bg-clip-text text-transparent font-bold text-center lg:text-right leading-[1.1] p-2 lg:p-3">
@@ -85,10 +85,10 @@ const Hero = () => {
                             <span className="text-3xl lg:text-[48px] w-full font-bold text-center lg:text-right leading-[1.1] p-2 lg:p-3">
                                 Operation<br /> Recover All Loot
                             </span>
-                            <p className="text-sm lg:text-lg lg:w-[645px] h-auto text-white text-center lg:text-right px-2 lg:px-0">
+                            <p className="text-sm lg:text-lg lg:w-[645px] h-auto text-white text-center lg:text-right px-2 lg:px4">
                                 Combating Corruption, Recovering Resources, Building a Better Ghana.
                             </p>
-                            <p className="text-sm lg:text-lg lg:w-[625px] h-auto text-white/80 text-center lg:text-right px-2 lg:px-0">
+                            <p className="text-sm lg:text-lg lg:w-[625px] h-auto text-white/80 text-center lg:text-right px-2 lg:px-4">
                                 Operation Recover All Loot (ORAL) is an independent public service initiative under the leadership of President-elect John Dramani Mahama. Our mission is to investigate corruption cases, recover misappropriated state resources, and prosecute offenders to ensure a transparent and accountable governance system.
                             </p>
                         </div>
@@ -123,7 +123,7 @@ const Hero = () => {
                         {/* Left Section */}
                         <div className="flex flex-col justify-center space-y-6 w-full lg:w-1/2">
                             {/* Mission Section */}
-                            <div className="bg-transparent w-full max-w-lg lg:max-w-none mx-auto lg:mx-0 p-4 lg:p-6">
+                            <div className="bg-transparent w-full max-w-lg lg:max-w-none mx-auto lg:mx-0 p-4 lg:p-4">
                                 <h2 className="text-xl lg:text-2xl font-bold mb-4">Our Mission</h2>
                                 <span className="text-sm lg:text-base">
                                     At ORAL, we are committed to:
@@ -147,7 +147,7 @@ const Hero = () => {
                             </div>
 
                             {/* How We Work Section */}
-                            <div className="bg-transparent w-full max-w-lg lg:max-w-none mx-auto lg:mx-0 p-4 lg:p-6">
+                            <div className="bg-transparent w-full max-w-lg lg:max-w-none mx-auto lg:mx-0 p-4 lg:p-4">
                                 <h2 className="text-xl lg:text-2xl font-bold mb-4">How We Work</h2>
                                 <p className="text-sm lg:text-base leading-relaxed">
                                     ORAL operates within a legal framework to ensure fairness and
@@ -173,15 +173,15 @@ const Hero = () => {
             </section>
 
 
-            <section className="bg-black text-white py-10 px-6 lg:px-16">
+            <section className="bg-black text-white py-10 px-6 lg:px-20 flex flex-col">
                 {/* Title Section */}
-                <div className="text-center mb-8">
+                <div className="text-left mb-8">
                     <h2 className="text-3xl lg:text-4xl font-bold">Report Corruption</h2>
                     <p className="text-sm lg:text-lg mt-4">
                         We encourage the public to report any suspected corruption cases
                         through our secure and confidential platforms:
                     </p>
-                    <div className="w-10 h-[2px] bg-red-500 mx-auto mt-2"></div>
+                    <div className="w-10 h-[2px] bg-red-500 mt-2"></div>
                 </div>
 
                 {/* Reporting Options */}
@@ -238,12 +238,12 @@ const Hero = () => {
             </section>
 
             <section>
-                <div className="relative bg-gray-100 py-16 px-4 sm:px-8">
+                <div className="relative bg-gray-100 py-16 px-4 lg:px-20 sm:px-8">
                     {/* Section Title */}
-                    <h2 className="text-center text-3xl font-bold text-black mb-12">Meet The Partners</h2>
+                    <h2 className="text-left text-3xl font-bold text-black mb-12">Meet The Partners</h2>
 
                     {/* Partners Grid */}
-                    <div className="flex flex-wrap justify-center gap-8">
+                    <div className="flex flex-wrap justify-start gap-8">
                         {/* Partner 1 */}
                         <a href="https://osp.gov.gh/" target="_blank" className="bg-white hover:bg-slate-100 shadow-md rounded-lg p-4 flex items-center justify-center w-full sm:w-48 h-24">
                             <img
@@ -294,7 +294,7 @@ const Hero = () => {
 
 
             <section>
-                <div className="h-auto lg:h-[700px] bg-[#1E1E1E] text-white p-6 lg:px-16">
+                <div className="h-auto lg:h-[700px] bg-[#1E1E1E] text-white p-6 lg:px-20">
                     <div className="container mx-auto">
                         {/* Header Section */}
                         <div className="flex justify-between items-center mb-6">
@@ -359,7 +359,7 @@ const Hero = () => {
 
             <section>
                 <div className="relative bg-black py-10">
-                    <div className="container mx-auto flex flex-col lg:flex-row items-center px-4 lg:px-16 mt-6 lg:mt-0">
+                    <div className="container mx-auto flex flex-col lg:flex-row items-center px-4 lg:px-20 mt-6 lg:mt-0">
                         {/* Left Section */}
                         <div className="text-white text-center lg:text-left mb-6 lg:mb-0">
                             <h2 className="text-[25px] sm:text-[30px] lg:text-[35px] font-medium w-full lg:w-[301px]">
@@ -368,7 +368,7 @@ const Hero = () => {
                         </div>
 
                         {/* Right Section */}
-                        <div className="flex flex-wrap justify-center lg:ml-[280px] ml-0 gap-6">
+                        <div className="flex flex-wrap justify-end ml-0 gap-6 lg:w-[1200px]">
                             {/* Card 1 */}
                             <div className="w-full sm:w-[250px] h-[110px] bg-gradient-to-r from-[#161F21] to-[#387A69] p-4 sm:p-6 text-white">
                                 <h3 className="text-[13px] font-semibold mb-2">END-TO-END ENCRYPTION</h3>
@@ -391,13 +391,6 @@ const Hero = () => {
                                 <h3 className="text-[13px] font-semibold mb-1">PROFESSIONAL HANDLING</h3>
                                 <p className="text-sm">Expert analysis and secure case management.</p>
                             </div>
-                        </div>
-                    </div>
-
-                    {/* Floating Button */}
-                    <div className="hidden absolute right-2 lg:top-0 top-6 transform -translate-y-1/2">
-                        <div className="bg-gradient-to-b from-[#387A69] to-[#161F21] text-white text-center rounded-full w-20 h-20 sm:w-28 sm:h-28 flex items-center justify-center shadow-md">
-                            <span className="text-xs sm:text-sm font-semibold">Send YOUR Complaint</span>
                         </div>
                     </div>
                 </div>

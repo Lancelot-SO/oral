@@ -26,7 +26,7 @@ export default function Navbar() {
         <header className="w-full">
             {/* Top banner */}
             <div className="w-full bg-[#0B5C2C] text-white py-2">
-                <div className="container mx-auto lg:px-20 px-4 flex justify-between items-center flex-wrap gap-4">
+                <div className="container mx-auto lg:px-24 px-4 flex justify-between items-center flex-wrap gap-4">
                     <div className="flex items-center gap-2">
                         <FaRegClock />
                         <span>All systems operational</span>
@@ -51,7 +51,7 @@ export default function Navbar() {
 
             {/* Main navigation */}
             <nav className="container mx-auto px-4 relative">
-                <div className="flex justify-between h-20 lg:px-16">
+                <div className="flex justify-between h-20 lg:px-20">
                     {/* Logo */}
                     <Link to="/" className="py-1">
                         <div className="w-24 h-12">
