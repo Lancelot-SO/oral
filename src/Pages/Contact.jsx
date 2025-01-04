@@ -17,7 +17,7 @@ const Contact = () => {
 
 
         emailjs
-            .sendForm('service_zdvl0th', 'template_pxt9jok', form.current, {
+            .sendForm('service_zdvl0th', 'template_itfqyvf', form.current, {
                 publicKey: 'aV-FvEfOZg7fbxTN2',
                 from_name: 'Oral Team',
             })
@@ -78,7 +78,7 @@ const Contact = () => {
                                 <input
                                     type="text"
                                     placeholder="Name"
-                                    name='name'
+                                    name='full_name'
                                     className="w-full p-2 border border-gray-200 rounded-md"
                                 />
 
