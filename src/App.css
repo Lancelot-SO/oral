@@ -11,47 +11,6 @@ app.css html {
 }
 
 /* Styles for the scrollbar */
-/* .custom-scrollbar::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: transparent;
-  border-radius: 10px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: green;
-  border-radius: 10px;
-  border: 1px solid transparent;
-  height: 15px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background-color: green;
-}
-
-.custom-scrollbar::-webkit-scrollbar-button {
-  display: none;
-}
-
-/* Apply styles to Firefox */
-/* .custom-scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: green transparent;
-} */
-.custom-scrollbar {
-  scrollbar-width: none;
-  /* Firefox */
-  -ms-overflow-style: none;
-  /* Internet Explorer 10+ */
-}
-
-.custom-scrollbar::-webkit-scrollbar {
-  display: none;
-  /* Safari and Chrome */
-}
 
 .tooltip-container {
   position: relative;

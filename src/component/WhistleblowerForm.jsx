@@ -5,6 +5,7 @@ import { useState, useRef } from "react";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import emailjs from '@emailjs/browser';
+import "./Global.css"
 
 const WhistleblowingForm = () => {
     const form = useRef(null); // Reference for the form
@@ -77,7 +78,7 @@ const WhistleblowingForm = () => {
     return (
         <div>
             <ToastContainer />
-            <form ref={form} encType="multipart/form-data" method="post" onSubmit={handleSubmit} className="max-w-md mx-auto h-[360px] overflow-y-auto border space-y-4">
+            <form ref={form} encType="multipart/form-data" method="post" onSubmit={handleSubmit} className="max-w-md mx-auto h-[360px] overflow-y-auto border space-y-4 custom-scrollbar">
                 <div className="mb-4">
                     <label htmlFor="full_name" className="block text-lg font-medium text-black smallS8:text-sm md:text-base lg:text-lg">
                         Your Full Name
