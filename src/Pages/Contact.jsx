@@ -43,7 +43,7 @@ const Contact = () => {
                     className="object-cover w-full h-[300px] sm:h-[400px] md:h-[500px]"
                     loading="lazy"
                 />
-                <div className="absolute top-[60%] sm:top-[65%] md:top-[54%] left-4 sm:left-8 md:left-[60px] transform -translate-y-1/2 sm:-translate-y-0 w-[90%] sm:w-[80%] md:w-[758px] h-auto flex flex-col gap-2 px-4">
+                <div className="absolute top-[60%] sm:top-[65%] md:top-[54%] left-4 sm:left-8 lg:left-[62px] transform -translate-y-1/2 sm:-translate-y-0 w-[90%] sm:w-[80%] md:w-[758px] h-auto flex flex-col gap-2 px-4">
                     <h2 className="text-3xl sm:text-4xl font-bold text-white">
                         Contact Us
                     </h2>
@@ -68,7 +68,7 @@ const Contact = () => {
                     </div>
 
                     {/* Form Card */}
-                    <div className="absolute lg:left-[19%] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-md bg-white/95 backdrop-blur-sm rounded-lg shadow-lg p-6">
+                    <div className="absolute lg:left-[20%] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-md bg-white/95 backdrop-blur-sm rounded-lg shadow-lg p-6">
                         <div className="p-6">
                             <h2 className="text-2xl font-semibold mb-6 text-center">
                                 Get in <span className="text-[#2B5335]">Touch</span>
@@ -126,7 +126,7 @@ const Contact = () => {
                 </div>
 
                 {/* Contact Methods */}
-                <div className="bg-white text-black rounded-lg shadow-md py-6 px-8 flex flex-col lg:flex-row justify-center items-center gap-6">
+                <div className="bg-white text-black rounded-lg shadow-md py-6 lg:w-[1344px] lg:ml-[55px] px-8 flex flex-col lg:flex-row justify-center items-center gap-6">
                     {/* Phone */}
                     <div className="flex items-center">
                         <div className="text-green-600 text-2xl mr-4">
@@ -167,7 +167,7 @@ const Contact = () => {
 
             <section>
                 <div className="relative bg-black py-10">
-                    <div className="container mx-auto flex flex-col lg:flex-row items-center px-4 lg:px-16 mt-6 lg:mt-0">
+                    <div className="container mx-auto flex flex-col lg:flex-row items-center px-4 lg:px-20 mt-6 lg:mt-0">
                         {/* Left Section */}
                         <div className="text-white text-center lg:text-left mb-6 lg:mb-0">
                             <h2 className="text-[25px] sm:text-[30px] lg:text-[35px] font-medium w-full lg:w-[301px]">
@@ -176,7 +176,7 @@ const Contact = () => {
                         </div>
 
                         {/* Right Section */}
-                        <div className="flex flex-wrap justify-center lg:ml-[280px] ml-0 gap-6">
+                        <div className="flex flex-wrap justify-end ml-0 gap-6 lg:w-[1041px]">
                             {/* Card 1 */}
                             <div className="w-full sm:w-[250px] h-[110px] bg-gradient-to-r from-[#161F21] to-[#387A69] p-4 sm:p-6 text-white">
                                 <h3 className="text-[13px] font-semibold mb-2">END-TO-END ENCRYPTION</h3>
@@ -201,8 +201,6 @@ const Contact = () => {
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </section>
         </div>

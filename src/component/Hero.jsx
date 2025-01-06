@@ -3,7 +3,7 @@ import React from "react";
 import herobg from "../assets/hero/herobg.png";
 import teamImg from "../assets/hero/teamImg.png";
 import flag2 from "../assets/hero/flag2.png"
-import freedom from "../assets/hero/freedom.png"
+import freedom from "../assets/hero/bgsec.png"
 import blackbg from "../assets/hero/blackbg.png"
 import Team1 from "../assets/hero/team1.png"
 import Team3 from "../assets/hero/team3.png"
@@ -15,6 +15,7 @@ import partner2 from "../assets/hero/partner2.png"
 import partner3 from "../assets/hero/partner3.png"
 import partner4 from "../assets/hero/partner4.png"
 import security from "../assets/hero/security.png"
+import texture from "../assets/hero/texture.png"
 import { FaShieldAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa"; // Import React Icons
 
 
@@ -76,29 +77,25 @@ const Hero = () => {
                     </div>
 
                     {/* Right Section (Text Content) */}
-                    <div className="w-full lg:w-1/2 text-white space-y-6 lg:h-full flex flex-col justify-end lg:pr-4 pr-0">
+                    <div className="w-full lg:w-1/2 text-white space-y-6 lg:h-full flex flex-col my-28 lg:pr-4 pr-0">
                         {/* Blue Container */}
                         <div className="flex flex-col w-full space-y-2 items-center lg:items-end">
-                            <span className="text-3xl lg:text-[38px] h-[55px] inline-block bg-gradient-to-r from-white to-white/30 bg-clip-text text-transparent font-bold text-center lg:text-right leading-[1.1] p-2 lg:p-3">
+                            <span className="text-3xl lg:text-[38px] h-[55px] inline-block bg-gradient-to-r from-white to-white/30 
+                            bg-clip-text text-transparent font-bold text-center lg:text-right leading-[1.1] lg:pr-4 pr-0">
                                 Welcome to
                             </span>
-                            <span className="text-3xl lg:text-[48px] w-full font-bold text-center lg:text-right leading-[1.1] p-2 lg:p-3">
-                                Operation<br /> Recover All Loot
+                            <span className="text-3xl lg:text-[48px] w-full font-bold text-center lg:text-right leading-[1.1] lg:pr-4 pr-0">
+                                Operation Recover All Loot
                             </span>
-                            <p className="text-sm lg:text-lg lg:w-[645px] h-auto text-white text-center lg:text-right px-2 lg:px4">
+                            <p className="font-bold text-sm lg:text-lg lg:w-[720px] h-auto text-white text-center lg:text-right px-2 lg:px-4">
                                 Combating Corruption, Recovering Resources, Building a Better Ghana.
                             </p>
-                            <p className="text-sm lg:text-lg lg:w-[625px] h-auto text-white/80 text-center lg:text-right px-2 lg:px-4">
+                            <p className="text-sm lg:text-lg lg:w-[625px] text-white/80 text-center lg:text-right px-2 lg:px-4 pt-4">
                                 Operation Recover All Loot (ORAL) is an independent public service initiative under the leadership of President-elect John Dramani Mahama. Our mission is to investigate corruption cases, recover misappropriated state resources, and prosecute offenders to ensure a transparent and accountable governance system.
                             </p>
                         </div>
 
-                        {/* Yellow Container */}
-                        <div className="flex justify-center lg:justify-end mt-4 lg:mt-0 opacity-0">
-                            <div className="bg-[#146221] w-full lg:w-[340px] h-[50px] lg:h-[69px] text-white font-bold flex items-center justify-center">
-                                Send your Message!
-                            </div>
-                        </div>
+
                     </div>
 
                 </div>
@@ -119,27 +116,34 @@ const Hero = () => {
                     <div className="absolute inset-0 bg-black/85"></div>
 
                     {/* Content Wrapper */}
-                    <div className="relative z-10 flex flex-col-reverse lg:flex-row w-full h-full px-4 lg:px-16 py-6 lg:py-0">
+                    <div className="relative z-10 flex flex-col-reverse lg:flex-row w-full h-full">
                         {/* Left Section */}
-                        <div className="flex flex-col justify-center space-y-6 w-full lg:w-1/2">
+                        <div className="flex flex-col justify-center w-full lg:w-1/2 lg:px-16 px-0"
+                            style={{
+                                backgroundImage: `url(${texture})`,
+                            }}>
                             {/* Mission Section */}
-                            <div className="bg-transparent w-full max-w-lg lg:max-w-none mx-auto lg:mx-0 p-4 lg:p-4">
-                                <h2 className="text-xl lg:text-2xl font-bold mb-4">Our Mission</h2>
+                            <div className="bg-transparent w-full h-auto mx-auto lg:mx-0 p-4 lg:p-4">
+                                <h2 className="text-xl lg:text-2xl font-bold mb-2">Our Mission</h2>
                                 <span className="text-sm lg:text-base">
                                     At ORAL, we are committed to:
                                 </span>
-                                <ul className="list-disc list-inside mt-4 text-sm lg:text-base leading-relaxed">
-                                    <li>
-                                        <strong>Investigating Corruption Cases:</strong> Establishing a
-                                        specialized task force to scrutinize suspected corruption cases.
+                                <ul className=" list-inside mt-2 text-sm lg:text-base leading-relaxed ">
+                                    <li className="list-disc">
+                                        <strong>Investigating Corruption Cases:</strong>
                                     </li>
-                                    <li>
+                                    <li className="pl-[22px]">Establishing a
+                                        specialized task force to scrutinize suspected corruption cases.</li>
+                                    <li className="list-disc">
                                         <strong>Recovering Misappropriated State Resources:</strong>{" "}
-                                        Prioritizing the retrieval of stolen state funds, property, and
-                                        other assets for national development projects.
+
                                     </li>
-                                    <li>
-                                        <strong>Prosecuting Offenders:</strong> Committing to prosecuting
+                                    <li className="pl-[22px]"> Prioritizing the retrieval of stolen state funds, property, and
+                                        other assets for national development projects.</li>
+                                    <li className="list-disc">
+                                        <strong>Prosecuting Offenders:</strong>
+                                    </li>
+                                    <li className="pl-[22px]">Committing to prosecuting
                                         individuals or entities found guilty of embezzling public
                                         resources.
                                     </li>
@@ -148,7 +152,7 @@ const Hero = () => {
 
                             {/* How We Work Section */}
                             <div className="bg-transparent w-full max-w-lg lg:max-w-none mx-auto lg:mx-0 p-4 lg:p-4">
-                                <h2 className="text-xl lg:text-2xl font-bold mb-4">How We Work</h2>
+                                <h2 className="text-xl lg:text-2xl font-bold mb-2">How We Work</h2>
                                 <p className="text-sm lg:text-base leading-relaxed">
                                     ORAL operates within a legal framework to ensure fairness and
                                     transparency. Our dedicated team of experts collaborates with
@@ -165,7 +169,7 @@ const Hero = () => {
                                 src={freedom}
                                 alt="Independence Arch"
                                 loading="lazy"
-                                className="w-3/4 max-w-sm lg:max-w-none lg:w-[450px] xl:w-[500px] h-auto object-cover"
+                                className="w-full h-full"
                             />
                         </div>
                     </div>
@@ -209,7 +213,7 @@ const Hero = () => {
                     </div>
 
                     {/* Email */}
-                    <div className="relative rounded-lg shadow-md py-6 px-4 w-full h-52 lg:h-[176px] flex items-center justify-center">
+                    <div className="relative rounded-lg shadow-md py-6 px-4 w-full lg:w-[420px] h-52 lg:h-[176px] flex items-center justify-center">
                         {/* Background Image */}
                         <img
                             src={address}
@@ -304,18 +308,18 @@ const Hero = () => {
                             </div>
                             <a
                                 href="/blog"
-                                className="text-white cursor-pointer hover:text-gray-300 transition-colors"
+                                className="text-white cursor-pointer hover:text-gray-300 transition-colors pr-0 lg:pr-4"
                             >
                                 See More
                             </a>
                         </div>
 
                         {/* News Grid */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 h-auto">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 h-auto">
                             {newsItems.map((item) => (
                                 <div
                                     key={item.id}
-                                    className="bg-white border-none rounded-lg overflow-hidden p-4 flex flex-col h-full"
+                                    className="bg-white border-none rounded-lg overflow-hidden p-4 flex flex-col h-full lg:w-[316px]"
                                 >
                                     <div className="relative w-full h-[280px]">
                                         <img
@@ -368,7 +372,7 @@ const Hero = () => {
                         </div>
 
                         {/* Right Section */}
-                        <div className="flex flex-wrap justify-end ml-0 gap-6 lg:w-[1200px]">
+                        <div className="flex flex-wrap justify-end ml-0 gap-6 lg:w-[1041px]">
                             {/* Card 1 */}
                             <div className="w-full sm:w-[250px] h-[110px] bg-gradient-to-r from-[#161F21] to-[#387A69] p-4 sm:p-6 text-white">
                                 <h3 className="text-[13px] font-semibold mb-2">END-TO-END ENCRYPTION</h3>

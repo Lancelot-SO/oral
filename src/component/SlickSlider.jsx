@@ -136,16 +136,16 @@ const SlickSlider = () => {
         <div className="relative overflow-hidden lg:pl-16 px-2 pt-10 lg:h-[900px] h-auto">
             <div className="text-left mb-12">
                 <h2 className="lg:text-4xl text-[20px] font-bold leading-tight">Team Profile</h2>
-                <p className="lg:w-[580px] h-[40px] lg:text-lg text-[14px] text-gray-600 mt-2 ">
+                <p className=" h-[40px] lg:text-lg text-[14px] text-gray-600 mt-2 ">
                     Our board consists of highly accomplished financial services experts with
                     a combined wealth of experience spanning more than two centuries.                    </p>
             </div>
             <div className="relative lg:h-[800px] h-[580px]">
                 <Slider ref={sliderRef} {...settings}>
                     {data.map((item) => (
-                        <div key={item.id} className="lg:px-4 px-0">
+                        <div key={item.id} className="">
                             {/* Card Design */}
-                            <div className="bg-white shadow-lg rounded-lg overflow-hidden lg:w-[400px] w-[330px] mx-auto relative lg:h-[590px] h-[500px]">
+                            <div className="bg-white shadow-lg rounded-lg overflow-hidden lg:w-[400px] w-[330px] relative lg:h-[590px] h-[500px]">
                                 {/* Image Section */}
                                 <div className="group relative w-full lg:h-[500px] h-[400px]">
                                     <img

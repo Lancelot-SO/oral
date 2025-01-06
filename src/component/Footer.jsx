@@ -20,7 +20,7 @@ const Footer = () => {
 
 
     return (
-        <div>
+        <div className="">
             <WhistleProtection isOpen={isWhistleProtectionOpen} onClose={() => setIsWhistleProtectionOpen(false)} />
             <WhistleRight isOpen={isWhistleRightOpen} onClose={() => setIsWhistleRightOpen(false)} />
             <Terms isOpen={isTermsOpen} onClose={() => setIsTermsOpen(false)} />
@@ -190,9 +190,9 @@ const Footer = () => {
                                     Report
                                 </a>
                                 <span>|</span>
-                                <a href="#" className="hover:text-gray-300 4xl:text-[20px] hover:underline">
-                                    Powered by unknown
-                                </a>
+                                <span className="hover:text-gray-300 4xl:text-[20px]">
+                                    Powered by ID
+                                </span>
                             </p>
                         </div>
 

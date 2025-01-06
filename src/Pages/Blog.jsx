@@ -236,7 +236,7 @@ const Blog = () => {
 
             <section>
                 <div className="relative bg-black py-10">
-                    <div className="container mx-auto flex flex-col lg:flex-row items-center px-4 lg:px-16 mt-6 lg:mt-0">
+                    <div className="container mx-auto flex flex-col lg:flex-row items-center px-4 lg:px-20 mt-6 lg:mt-0">
                         {/* Left Section */}
                         <div className="text-white text-center lg:text-left mb-6 lg:mb-0">
                             <h2 className="text-[25px] sm:text-[30px] lg:text-[35px] font-medium w-full lg:w-[301px]">
@@ -245,7 +245,7 @@ const Blog = () => {
                         </div>
 
                         {/* Right Section */}
-                        <div className="flex flex-wrap justify-center lg:ml-[280px] ml-0 gap-6">
+                        <div className="flex flex-wrap justify-end ml-0 gap-6 lg:w-[1041px]">
                             {/* Card 1 */}
                             <div className="w-full sm:w-[250px] h-[110px] bg-gradient-to-r from-[#161F21] to-[#387A69] p-4 sm:p-6 text-white">
                                 <h3 className="text-[13px] font-semibold mb-2">END-TO-END ENCRYPTION</h3>
@@ -270,8 +270,6 @@ const Blog = () => {
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </section>
         </div>

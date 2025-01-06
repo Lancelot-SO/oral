@@ -30,8 +30,8 @@ const About = () => {
             </div>
 
             <section>
-                <div className="flex items-center justify-center 4xl:justify-start 4xl:px-20 px-4">
-                    <div className="bg-[#F8F8F8] w-full lg:px-16 px-0 h-auto flex flex-col lg:flex-row items-center lg:items-start justify-between gap-6 py-6">
+                <div className="flex items-center 4xl:justify-start 4xl:px-20 px-4 lg:px-16">
+                    <div className="bg-gray-200 ml-4 w-[1345px] lg:px-16 px-0 h-auto flex flex-col lg:flex-row items-center lg:items-start justify-between gap-6 py-6">
                         {/* Mission Section */}
                         <div className="w-full md:w-[548px] h-full flex flex-col items-start justify-center md:text-left">
                             <h2 className="font-bold text-[20px] md:text-[24px]">Mission</h2>
@@ -56,15 +56,15 @@ const About = () => {
                 </div>
             </section>
 
-            <section className="py-10  bg-white">
+            <section className="py-10 bg-white">
                 <div className="lg:px-20 px-4">
-                    <h2 className="text-2xl md:text-3xl font-bold mb-4">Our Approach</h2>
-                    <p className="text-sm md:text-base mb-6 text-[#56575D]">
+                    <h2 className="text-2xl md:text-3xl font-bold mb-2">Our Approach</h2>
+                    <p className="text-sm md:text-base mb-2 text-[#56575D]">
                         ORAL employs a three-pronged strategy:
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {/* Investigation Section */}
-                        <div className="bg-[#F8F8F8] p-6 lg:px-0 rounded-md shadow-sm">
+                        <div className="bg-gray-200 p-6 rounded-md shadow-sm">
                             <h3 className="font-bold text-lg mb-2">Investigation</h3>
                             <p className="text-sm md:text-base text-[#56575D]">
                                 We conduct thorough, evidence-based investigations into allegations of corruption and financial misconduct, utilizing state-of-the-art forensic tools and methodologies.
@@ -72,7 +72,7 @@ const About = () => {
                         </div>
 
                         {/* Recovery Section */}
-                        <div className="bg-[#F8F8F8] p-6 rounded-md shadow-sm">
+                        <div className="bg-gray-200 p-6 rounded-md shadow-sm">
                             <h3 className="font-bold text-lg mb-2">Recovery</h3>
                             <p className="text-sm md:text-base text-[#56575D]">
                                 Through legal channels and international cooperation, we work to trace and recover misappropriated state assets, both within Ghana and abroad.
@@ -80,7 +80,7 @@ const About = () => {
                         </div>
 
                         {/* Prevention Section */}
-                        <div className="bg-[#F8F8F8] p-6 rounded-md shadow-sm">
+                        <div className="bg-gray-200 p-6 w-[420px] rounded-md shadow-sm">
                             <h3 className="font-bold text-lg mb-2">Prevention</h3>
                             <p className="text-sm md:text-base text-[#56575D]">
                                 We analyze patterns of corruption to recommend systemic improvements and strengthen institutional safeguards against future misconduct.
@@ -91,12 +91,12 @@ const About = () => {
             </section>
 
             <section className="bg-black text-white py-16 px-4">
-                <div className="max-w-6xl mx-4 lg:mx-14">
+                <div className="max-w-6xl mx-4 lg:mx-16">
                     <h2 className="lg:text-4xl text-[24px] font-bold mb-4">
                         Our Commitment to <br />Transparency
                     </h2>
 
-                    <p className="text-lg mb-8">
+                    <p className="text-lg mb-2">
                         ORAL operates with complete independence and transparency. Our processes are:
                     </p>
 
@@ -112,7 +112,7 @@ const About = () => {
                             </div>
                         </div>
 
-                        <div className="space-y-4">
+                        <div className="space-y-4 pl-[120px]">
                             <div className="flex items-start">
                                 <span className="mr-3 mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-white"></span>
                                 <span>Regular public reporting of progress</span>
@@ -130,7 +130,7 @@ const About = () => {
                 <div className="w-full h-auto flex flex-col-reverse md:flex-row ">
                     {/* Text Section */}
                     <div className="md:flex-1 flex items-center justify-center lg:justify-start">
-                        <div className="w-full max-w-[400px] h-auto md:h-[208px] flex flex-col lg:pl-[80px] pl-4 py-6 md:py-0">
+                        <div className="w-full max-w-[600px] h-auto md:h-[208px] flex flex-col lg:pl-[80px] pl-4 py-6 md:py-0">
                             <h2 className="text-[24px] md:text-[30px] font-semibold text-black">
                                 Public Participation
                             </h2>
@@ -183,7 +183,7 @@ const About = () => {
                 <div className="w-full h-auto flex flex-col-reverse md:flex-row ">
                     {/* Text Section */}
                     <div className="md:flex-1 flex items-center justify-center lg:justify-start">
-                        <div className="w-full max-w-[400px] h-auto md:h-[208px] flex flex-col lg:pl-[80px] pl-4 py-6 md:py-0">
+                        <div className="w-full max-w-[600px] h-auto md:h-[208px] flex flex-col lg:pl-[80px] pl-4 py-6 md:py-0">
                             <h2 className="text-[24px] md:text-[30px] font-semibold text-black">
                                 International Cooperation
                             </h2>
@@ -222,7 +222,7 @@ const About = () => {
                         </div>
 
                         {/* Right Section */}
-                        <div className="flex flex-wrap justify-center lg:ml-[280px] ml-0 gap-6">
+                        <div className="flex flex-wrap justify-center lg:ml-[265px] ml-0 gap-6">
                             {/* Card 1 */}
                             <div className="w-full sm:w-[250px] h-[110px] bg-gradient-to-r from-[#161F21] to-[#387A69] p-4 sm:p-6 text-white">
                                 <h3 className="text-[13px] font-semibold mb-2">END-TO-END ENCRYPTION</h3>
