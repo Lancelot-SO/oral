@@ -55,7 +55,7 @@ const Hero = () => {
     ];
     return (
         <div className="overflow-hidden">
-            <div className="relative w-full h-auto lg:h-[550px]">
+            <div className="relative w-full h-auto lg:h-[500px]">
                 {/* Background Image */}
                 <img
                     src={herobg}
@@ -65,9 +65,9 @@ const Hero = () => {
                 />
 
                 {/* Content Overlay */}
-                <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-start justify-between h-full w-full lg:pr-16">
+                <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-start justify-between h-full w-full lg:pr-16 pr-0">
                     {/* Left Section (Image of Team) */}
-                    <div className="flex-shrink-0 w-full lg:w-1/2 lg:max-w-[697px] mb-6 lg:mb-0">
+                    <div className="flex-shrink-0 w-full lg:w-1/2 lg:max-w-[697px]">
                         <img
                             src={teamImg}
                             alt="Team"
@@ -77,7 +77,7 @@ const Hero = () => {
                     </div>
 
                     {/* Right Section (Text Content) */}
-                    <div className="w-full lg:w-1/2 text-white space-y-6 lg:h-full flex flex-col my-28 lg:pr-4 pr-0">
+                    <div className="w-full lg:w-1/2 text-white space-y-6 lg:h-full flex flex-col lg:my-28 my-6 lg:pr-4 pr-0">
                         {/* Blue Container */}
                         <div className="flex flex-col w-full space-y-2 items-center lg:items-end">
                             <span className="text-3xl lg:text-[38px] h-[55px] inline-block bg-gradient-to-r from-white to-white/30 
@@ -366,7 +366,7 @@ const Hero = () => {
                     <div className="container mx-auto flex flex-col lg:flex-row items-center px-4 lg:px-20 mt-6 lg:mt-0">
                         {/* Left Section */}
                         <div className="text-white text-center lg:text-left mb-6 lg:mb-0">
-                            <h2 className="text-[25px] sm:text-[30px] lg:text-[35px] font-medium w-full lg:w-[301px]">
+                            <h2 className="text-[25px] sm:text-[30px] lg:text-[35px] font-medium w-full lg:w-[331px]">
                                 YOUR SECURITY IS OUR PRIORITY
                             </h2>
                         </div>

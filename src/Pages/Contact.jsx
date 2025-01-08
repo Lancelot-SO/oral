@@ -170,7 +170,7 @@ const Contact = () => {
                     <div className="container mx-auto flex flex-col lg:flex-row items-center px-4 lg:px-20 mt-6 lg:mt-0">
                         {/* Left Section */}
                         <div className="text-white text-center lg:text-left mb-6 lg:mb-0">
-                            <h2 className="text-[25px] sm:text-[30px] lg:text-[35px] font-medium w-full lg:w-[301px]">
+                            <h2 className="text-[25px] sm:text-[30px] lg:text-[35px] font-medium w-full lg:w-[331px]">
                                 YOUR SECURITY IS OUR PRIORITY
                             </h2>
                         </div>
