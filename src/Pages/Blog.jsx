@@ -245,7 +245,7 @@ const Blog = () => {
                         </div>
 
                         {/* Right Section */}
-                        <div className="flex flex-wrap justify-end ml-0 gap-6 lg:w-[1041px]">
+                        <div className="flex flex-wrap justify-end ml-0 lg:pr-4 pr-0 gap-6 lg:w-[1041px] 4xl:w-[1400px] 4xl:pr-0">
                             {/* Card 1 */}
                             <div className="w-full sm:w-[250px] h-[110px] bg-gradient-to-r from-[#161F21] to-[#387A69] p-4 sm:p-6 text-white">
                                 <h3 className="text-[13px] font-semibold mb-2">END-TO-END ENCRYPTION</h3>

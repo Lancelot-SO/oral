@@ -31,7 +31,7 @@ const About = () => {
 
             <section>
                 <div className="flex items-center 4xl:justify-start 4xl:px-20 px-4 lg:px-16">
-                    <div className="bg-gray-200 ml-4 w-[1345px] lg:px-16 px-0 h-auto flex flex-col lg:flex-row items-center lg:items-start justify-between gap-6 py-6">
+                    <div className="bg-gray-200 mt-4 ml-0 4xl:ml-0 4xl:lg:w-[1755px] lg:w-[1345px] lg:px-16 px-4 h-auto flex flex-col lg:flex-row items-center lg:items-start justify-between gap-6 py-6">
                         {/* Mission Section */}
                         <div className="w-full md:w-[548px] h-full flex flex-col items-start justify-center md:text-left">
                             <h2 className="font-bold text-[20px] md:text-[24px]">Mission</h2>
@@ -80,7 +80,7 @@ const About = () => {
                         </div>
 
                         {/* Prevention Section */}
-                        <div className="bg-gray-200 p-6 w-[420px] rounded-md shadow-sm">
+                        <div className="bg-gray-200 p-6 lg:w-[420px] 4xl:w-full rounded-md shadow-sm">
                             <h3 className="font-bold text-lg mb-2">Prevention</h3>
                             <p className="text-sm md:text-base text-[#56575D]">
                                 We analyze patterns of corruption to recommend systemic improvements and strengthen institutional safeguards against future misconduct.
@@ -112,7 +112,7 @@ const About = () => {
                             </div>
                         </div>
 
-                        <div className="space-y-4 pl-[120px]">
+                        <div className="space-y-4 lg:pl-[120px] 4xl:pl-[130px] pl-0">
                             <div className="flex items-start">
                                 <span className="mr-3 mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-white"></span>
                                 <span>Regular public reporting of progress</span>
@@ -222,7 +222,7 @@ const About = () => {
                         </div>
 
                         {/* Right Section */}
-                        <div className="flex flex-wrap justify-end ml-0 gap-6 lg:w-[1041px]">
+                        <div className="flex flex-wrap justify-end ml-0 lg:pr-4 pr-0 gap-6 lg:w-[1041px] 4xl:w-[1400px] 4xl:pr-0">
                             {/* Card 1 */}
                             <div className="w-full sm:w-[250px] h-[110px] bg-gradient-to-r from-[#161F21] to-[#387A69] p-4 sm:p-6 text-white">
                                 <h3 className="text-[13px] font-semibold mb-2">END-TO-END ENCRYPTION</h3>

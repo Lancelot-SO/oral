@@ -68,7 +68,8 @@ const Contact = () => {
                     </div>
 
                     {/* Form Card */}
-                    <div className="absolute lg:left-[20%] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-md bg-white/95 backdrop-blur-sm rounded-lg shadow-lg p-6">
+                    <div className="absolute 4xl:left-[15%] lg:left-[20%] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-md
+                     bg-white/95 backdrop-blur-sm rounded-lg shadow-lg p-6">
                         <div className="p-6">
                             <h2 className="text-2xl font-semibold mb-6 text-center">
                                 Get in <span className="text-[#2B5335]">Touch</span>
@@ -126,7 +127,7 @@ const Contact = () => {
                 </div>
 
                 {/* Contact Methods */}
-                <div className="bg-white text-black rounded-lg shadow-md py-6 lg:w-[1344px] lg:ml-[55px] px-8 flex flex-col lg:flex-row justify-center items-center gap-6">
+                <div className="bg-white text-black rounded-lg shadow-md py-6 lg:w-[1344px] 4xl:w-[1750px] lg:ml-[55px] px-8 flex flex-col lg:flex-row justify-center items-center gap-6">
                     {/* Phone */}
                     <div className="flex items-center">
                         <div className="text-green-600 text-2xl mr-4">
@@ -176,7 +177,7 @@ const Contact = () => {
                         </div>
 
                         {/* Right Section */}
-                        <div className="flex flex-wrap justify-end ml-0 gap-6 lg:w-[1041px]">
+                        <div className="flex flex-wrap justify-end ml-0 lg:pr-4 pr-0 gap-6 lg:w-[1041px] 4xl:w-[1400px] 4xl:pr-0">
                             {/* Card 1 */}
                             <div className="w-full sm:w-[250px] h-[110px] bg-gradient-to-r from-[#161F21] to-[#387A69] p-4 sm:p-6 text-white">
                                 <h3 className="text-[13px] font-semibold mb-2">END-TO-END ENCRYPTION</h3>

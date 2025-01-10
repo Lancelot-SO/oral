@@ -191,7 +191,8 @@ const Hero = () => {
                 {/* Reporting Options */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     {/* Secure Portal */}
-                    <a href="/report" className="flex lg:flex-row flex-col items-center justify-center gap-4 bg-white hover:bg-slate-200 text-black rounded-lg shadow-md lg:w-[395px] w-full h-[176px]">
+                    <a href="/report" className="flex lg:flex-row flex-col items-center justify-center gap-4 bg-white hover:bg-slate-200 text-black rounded-lg shadow-md 
+                    lg:w-[395px] w-full h-[176px] 4xl:w-[520px]">
                         <div className="w-14 h-14 flex items-center justify-center rounded-full border border-green-500 mb-4">
                             <FaShieldAlt className="text-green-500 text-2xl" /> {/* React Icon */}
                         </div>
@@ -202,7 +203,8 @@ const Hero = () => {
                     </a>
 
                     {/* Toll-Free Number */}
-                    <div className="flex lg:flex-row flex-col items-center justify-center gap-4 bg-white text-black rounded-lg shadow-md lg:w-[395px] w-full h-[176px]">
+                    <div className="flex lg:flex-row flex-col items-center justify-center gap-4 bg-white text-black rounded-lg shadow-md 
+                    lg:w-[395px] w-full h-[176px] 4xl:w-[520px]">
                         <div className="w-14 h-14 flex items-center justify-center rounded-full border border-green-500 mb-4">
                             <FaPhoneAlt className="text-green-500 text-2xl" /> {/* React Icon */}
                         </div>
@@ -213,7 +215,7 @@ const Hero = () => {
                     </div>
 
                     {/* Email */}
-                    <div className="relative rounded-lg shadow-md py-6 px-4 w-full lg:w-[420px] h-52 lg:h-[176px] flex items-center justify-center">
+                    <div className="relative rounded-lg shadow-md py-6 px-4 w-full lg:w-[420px] 4xl:w-[550px] h-52 lg:h-[176px] flex items-center justify-center">
                         {/* Background Image */}
                         <img
                             src={address}
@@ -249,7 +251,7 @@ const Hero = () => {
                     {/* Partners Grid */}
                     <div className="flex flex-wrap justify-start gap-8">
                         {/* Partner 1 */}
-                        <a href="https://osp.gov.gh/" target="_blank" className="bg-white hover:bg-slate-100 shadow-md rounded-lg p-4 flex items-center justify-center w-full sm:w-48 h-24">
+                        <a href="https://osp.gov.gh/" target="_blank" className="bg-white hover:bg-slate-100 shadow-md rounded-lg p-4 flex items-center justify-center w-full lg:w-48 h-24 4xl:w-[300px] 4xl:h-[120px]">
                             <img
                                 src={partner1}
                                 alt="Office of the Special Prosecutor"
@@ -258,7 +260,7 @@ const Hero = () => {
                         </a>
 
                         {/* Partner 2 */}
-                        <a href="https://chraj.gov.gh/" target="_blank" className="bg-white hover:bg-slate-100 shadow-md rounded-lg p-4 flex items-center justify-center w-full sm:w-48 h-24">
+                        <a href="https://chraj.gov.gh/" target="_blank" className="bg-white hover:bg-slate-100 shadow-md rounded-lg p-4 flex items-center justify-center w-full sm:w-48 h-24 4xl:w-[300px] 4xl:h-[120px]">
                             <img
                                 src={partner2}
                                 alt="Commission on Human Rights & Justice"
@@ -267,7 +269,7 @@ const Hero = () => {
                         </a>
 
                         {/* Partner 3 */}
-                        <a href="https://police.gov.gh/en/" target="_blank" className="bg-white hover:bg-slate-100 shadow-md rounded-lg p-4 flex items-center justify-center w-full sm:w-48 h-24">
+                        <a href="https://police.gov.gh/en/" target="_blank" className="bg-white hover:bg-slate-100 shadow-md rounded-lg p-4 flex items-center justify-center w-full sm:w-48 h-24 4xl:w-[300px] 4xl:h-[120px]">
                             <img
                                 src={partner3}
                                 alt="Ghana Police Service"
@@ -276,7 +278,7 @@ const Hero = () => {
                         </a>
 
                         {/* Partner 4 */}
-                        <a href="https://eoco.gov.gh/" target="_blank" className="bg-white hover:bg-slate-100 shadow-md rounded-lg p-4 flex items-center justify-center w-full sm:w-48 h-24">
+                        <a href="https://eoco.gov.gh/" target="_blank" className="bg-white hover:bg-slate-100 shadow-md rounded-lg p-4 flex items-center justify-center w-full sm:w-48 h-24 4xl:w-[300px] 4xl:h-[120px]">
                             <img
                                 src={partner4}
                                 alt="Economic and Organized Crime Office (EOCO)"
@@ -298,28 +300,28 @@ const Hero = () => {
 
 
             <section>
-                <div className="h-auto lg:h-[700px] bg-[#1E1E1E] text-white p-6 lg:px-20">
+                <div className="h-auto lg:h-[700px] bg-[#1E1E1E] text-white p-6 lg:px-20 4xl:px-4">
                     <div className="container mx-auto">
                         {/* Header Section */}
                         <div className="flex justify-between items-center mb-6">
-                            <div>
+                            <div className="4xl:pl-20 pl-0 lg:pl-0">
                                 <h1 className="text-4xl font-bold mb-2">News</h1>
                                 <p className="text-gray-400">Hear the latest news from our task...</p>
                             </div>
                             <a
                                 href="/blog"
-                                className="text-white cursor-pointer hover:text-gray-300 transition-colors pr-0 lg:pr-4"
+                                className="text-white cursor-pointer hover:text-gray-300 transition-colors pr-0 lg:pr-4 4xl:pr-16"
                             >
                                 See More
                             </a>
                         </div>
 
                         {/* News Grid */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 h-auto">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 4xl:pl-20 h-auto">
                             {newsItems.map((item) => (
                                 <div
                                     key={item.id}
-                                    className="bg-white border-none rounded-lg overflow-hidden p-4 flex flex-col h-full lg:w-[316px]"
+                                    className="bg-white border-none rounded-lg overflow-hidden p-4 flex flex-col h-full lg:w-[316px] 4xl:w-[370px]"
                                 >
                                     <div className="relative w-full h-[280px]">
                                         <img
@@ -372,7 +374,7 @@ const Hero = () => {
                         </div>
 
                         {/* Right Section */}
-                        <div className="flex flex-wrap justify-end ml-0 gap-6 lg:w-[1041px]">
+                        <div className="flex flex-wrap justify-end ml-0 lg:pr-4 pr-0 gap-6 lg:w-[1041px] 4xl:w-[1400px] 4xl:pr-0">
                             {/* Card 1 */}
                             <div className="w-full sm:w-[250px] h-[110px] bg-gradient-to-r from-[#161F21] to-[#387A69] p-4 sm:p-6 text-white">
                                 <h3 className="text-[13px] font-semibold mb-2">END-TO-END ENCRYPTION</h3>
